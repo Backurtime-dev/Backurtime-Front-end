@@ -1,0 +1,66 @@
+# Ignore node_modules
+node_modules
+
+# Build outputs
+.next
+out
+build
+dist
+.next/static
+.next/cache
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package manager lock files (optional, keep if you want)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Public assets (optional)
+public/*.png
+public/*.jpg
+public/*.jpeg
+public/*.gif
+public/*.ico
+public/*.svg
+
+# TypeScript build info
+tsconfig.tsbuildinfo
+
+# Next.js telemetry or generated content
+.next/trace
+.next/analyze
+.next/types
+
+# Ignore coverage output
+coverage
+
+# Generated or temporary files
+*.log
+*.tmp
+
+# Ignore storybook builds if you use it
+storybook-static
+
+# Ignore cypress or playwright artifacts
+cypress/videos
+cypress/screenshots
+playwright-report
