@@ -21,6 +21,7 @@ const eslintConfig = defineConfig([
     },
     rules: {
       ...eslintConfigPrettier.rules,
+      "react/no-unescaped-entities": ["off"],
       "prettier/prettier": "error",
     },
   },

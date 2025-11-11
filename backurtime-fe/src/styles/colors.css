@@ -1,0 +1,10 @@
+@theme {
+  --color-green-normal: #00ffea;
+
+  --color-grey-light: #dcdcdc;
+  --color-grey-input: #807f8b;
+
+  --color-black-normal: #08151d;
+
+  --color-red-error: #ff4167;
+}

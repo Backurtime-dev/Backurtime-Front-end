@@ -1,0 +1,4 @@
+@theme {
+  --font-inter: var(--font-inter), sans-serif;
+  --font-cinzel: var(--font-cinzel), serif;
+}
