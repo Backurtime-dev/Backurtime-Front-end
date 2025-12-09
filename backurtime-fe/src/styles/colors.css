@@ -9,4 +9,9 @@
   --color-red-error: #ff4167;
 
   --color-dark-normal: #08151d;
+  --color-primitives-white_30: rgba(255, 255, 255, 0.3);
+
+  /* shadow */
+
+  --shadow-light: 0 7px 14px 0 rgba(255, 255, 255, 0.24);
 }

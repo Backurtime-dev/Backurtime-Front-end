@@ -26,7 +26,7 @@ export default function DashboardLayout({
     },
     "/dashboard/offers": {
       name: "Offers",
-      bg: "/pages/profile/avatar_podium.webp",
+      bg: "/components/offers-bg.png",
     },
     "/dashboard/settings": {
       name: "Settings",
@@ -39,10 +39,10 @@ export default function DashboardLayout({
     bg: "/images/settings-bg.jpg",
   };
   return (
-    <div className="flex h-full w-full bg-black">
+    <div className="bg-black-normal flex h-full w-full">
       <Navbar />
       <div
-        className="w-full px-[70px] py-8  bg-cover bg-center"
+        className="w-full bg-cover bg-center px-5 py-8 md:px-8 xl:px-[70px]"
         style={{ backgroundImage: `url(${bg})` }}
       >
         <Header title={name} />

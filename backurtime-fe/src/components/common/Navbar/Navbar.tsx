@@ -16,14 +16,15 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <div className="bg-dark-normal group top-0 left-0 z-9999 flex min-h-dvh w-28 flex-col justify-between rounded-r-[40px] px-6 py-8 hover:w-[280px]">
+    <div className="bg-dark-normal group border-r-primitives-white_30 top-0 left-0 z-9999 flex min-h-dvh w-28 flex-col justify-between overflow-hidden rounded-r-[40px] border-r-[.5px] px-6 py-8 transition-all duration-300 ease-in-out hover:w-[280px]">
       <div className="flex w-full flex-col gap-y-[142px]">
-        <div className="flex items-center justify-center group-hover:justify-start group-hover:gap-x-5">
+        <div className="flex items-center justify-center transition-all duration-300 group-hover:justify-start group-hover:gap-x-5">
           <Image src="/logo.png" alt="app logo" width={40} height={40} />
-          <span className="font-inter hidden text-[22px] font-semibold text-white group-hover:block">
+          <span className="font-inter hidden text-[22px] font-semibold text-white transition-opacity duration-300 group-hover:block">
             Backurtime
           </span>
         </div>
+
         <div className="flex w-full flex-col gap-y-[14px]">
           {NAVBAR_ROUTES.map((r) => {
             const isActive = currentRoute === r.name;
@@ -32,12 +33,13 @@ export default function Navbar() {
           })}
         </div>
       </div>
+
       <Link
         href="/dashboard"
-        className="flex items-center justify-center group-hover:justify-start group-hover:gap-x-6"
+        className="flex items-center justify-center transition-all duration-300 group-hover:justify-start group-hover:gap-x-6"
       >
         <Help />
-        <span className="font-inter text-grey-light hidden text-base font-medium group-hover:block">
+        <span className="font-inter text-grey-light hidden text-base font-medium transition-opacity duration-300 group-hover:block">
           Help & Support
         </span>
       </Link>

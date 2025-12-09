@@ -56,15 +56,25 @@ export default function NavbarRoute({ route, isActive }: NavbarRouteProps) {
     <Link
       href={to}
       className={cn(
-        "flex w-full items-center justify-center rounded-2xl bg-transparent px-5 py-4 group-hover:justify-start group-hover:gap-x-6",
+        "group/nav flex w-full items-center justify-start rounded-2xl px-4 py-4 transition-all duration-300 ease-in-out group-hover:px-5",
+        "group-hover:justify-start group-hover:gap-x-6",
+        "hover:bg-white/10 hover:bg-[url(/components/route-item_active.png)] hover:bg-left hover:bg-no-repeat",
         isActive &&
           "bg-white/10 bg-[url(/components/route-item_active.png)] bg-left bg-no-repeat",
       )}
     >
-      {icon}
+      <div
+        className={cn(
+          "flex flex-shrink-0 items-center justify-center transition-all duration-300 ease-in-out group-hover:w-max",
+          isActive ? "text-white" : "text-grey-light",
+        )}
+      >
+        {icon}
+      </div>
       <span
         className={cn(
-          "font-inter text-grey-light hidden text-base font-medium group-hover:block",
+          "font-inter text-grey-light translate-x-[-8px] overflow-hidden text-base font-medium whitespace-nowrap opacity-0 transition-all duration-300 ease-in-out",
+          "group-hover:translate-x-0 group-hover:opacity-100",
           isActive && "text-white",
         )}
       >
