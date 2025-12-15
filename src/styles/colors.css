@@ -20,6 +20,10 @@
   --color-dark-10: rgba(255, 255, 255, 0.02);
   --color-dark-100: rgba(0, 0, 0, 0.2);
   --color-dark-50: #18242b;
+  --color-dark-60: #2f343d;
+  --color-gray-10: #454951;
+  --color-primitives-black_50: rgba(8, 21, 29, 0.5);
+  --color-primitives-grey_200: #ababab;
 
   /* shadow */
 
@@ -28,7 +32,6 @@
   --text-shadow-dark-small: 0 4px 0 rgba(0, 0, 0, 0.5);
   --shadow-white: 0px 4px 20px 0px rgba(235, 255, 253, 1);
   --drop-shadow-icon-sm: 0 4px 10px rgba(235, 255, 255, 0.8);
-
   --shadow-stone:
     0 4px 81.9px 0 rgba(54, 255, 255, 0.2) inset,
     0 -2px 5px 0 rgba(54, 255, 255, 0.4) inset,

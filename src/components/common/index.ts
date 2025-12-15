@@ -9,8 +9,11 @@ import ProfileButton from "./ProfileButton";
 import Toggle from "./Toggle";
 import { Tabs } from "./Tabs";
 import { Groups } from "./Groups";
+import FilterChips from "./FilterChips";
+import Status from "./Status";
 
 export {
+  Status,
   NeonText,
   Input,
   Button,
@@ -21,4 +24,5 @@ export {
   Toggle,
   Tabs,
   Groups,
+  FilterChips,
 };

@@ -1,9 +1,8 @@
 import { Groups } from "@/components/common";
 import { useState } from "react";
 import EmptyState from "./components/EmptyState";
-import Image from "next/image";
 import SubscriptionOwnerCard from "@/components/cards/subscriber_card";
-import { cn } from "@/utils";
+import { TotalSavedLabel } from "@/components/common/Tags";
 
 interface subscriptionProps {
   status: string;
@@ -60,28 +59,7 @@ export default function SubscriptionsSection() {
             Manage active subscriptions, members, check payment history.
           </span>
         </div>
-        <div
-          className={cn(
-            "shadow-button h-auto w-max shrink-0 rounded-[20px] p-px",
-            "bg-[linear-gradient(97.44deg,#90D2F6_5.72%,#009FAA_38.32%,#00CDBD_84.96%,#C2E8FD_110.09%)]",
-          )}
-        >
-          <div className="bg-dark-50 flex h-auto w-full items-center justify-center gap-1.5 rounded-[20px] border border-solid border-transparent px-[18px] py-3">
-            <Image
-              src="/icons/bag-gold.svg"
-              alt="bag gold"
-              width={32}
-              height={32}
-              className="drop-shadow-icon-sm"
-            />
-            <span className="font-inter text-grey-light text-base leading-[140%]! font-normal">
-              Total saved:
-            </span>
-            <span className="font-inter text-green-normal ml-1 text-lg leading-[140%]! font-semibold tracking-[1%]">
-              € 3 456
-            </span>
-          </div>
-        </div>
+        <TotalSavedLabel label="Total saved:" amount={"€ 3 456"} />
       </div>
       <div className="flex w-full flex-col gap-y-6">
         <Groups

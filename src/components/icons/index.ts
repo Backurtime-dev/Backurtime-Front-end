@@ -1,3 +1,4 @@
+export { default as TooltipArrow } from "./TooltipArrow";
 export { default as Adds } from "./Adds";
 export { default as Clan } from "./Clan";
 export { default as Clock } from "./Clock";

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Progress } from "@/components/ui/progress";
+import { Status } from "@/components/common";
 const OfferCard = ({
   image,
   title,
@@ -67,22 +68,7 @@ const OfferCard = ({
           </div>
 
           {progress < 100 ? null : (
-            <div className="rounded-[12px] p-px [background:linear-gradient(90deg,#C2E8FD_-0.05%,#67E0AC_31.2%,#138B57_75.92%,#C2E8FD_100.02%)]">
-              <div className="bg-primitives-grey_800 rounded-[12px]">
-                <div className="bg-primitives-white_20 flex items-center gap-1.5 rounded-[12px] px-3 py-1.5">
-                  <Image
-                    src="/icons/tick.svg"
-                    alt="tick"
-                    width={18}
-                    height={18}
-                    className="shrink object-contain"
-                  />
-                  <span className="font-inter leading-[120%]! font-semibold tracking-[.12px] text-white">
-                    Your content
-                  </span>
-                </div>
-              </div>
-            </div>
+            <Status text="Your content" status={"completed"} />
           )}
         </div>
       </div>

@@ -1,10 +1,16 @@
 import type { SVGProps } from "react";
-const SvgClock = (props: SVGProps<SVGSVGElement>) => (
+
+type IconProps = SVGProps<SVGSVGElement> & {
+  size?: number;
+};
+
+const SvgClock = ({ size = 20, ...props }: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={20}
-    height={20}
+    width={size}
+    height={size}
     fill="none"
+    viewBox="0 0 20 20"
     {...props}
   >
     <path
