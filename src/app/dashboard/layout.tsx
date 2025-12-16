@@ -45,15 +45,17 @@ export default function DashboardLayout({
     bg: "/images/settings-bg.jpg",
   };
   return (
-    <div className="bg-black-normal flex h-full w-full pb-16 sm:pb-0">
+    <div
+      className="bg-black-normal flex h-full w-full overflow-auto bg-scroll pb-16 sm:pb-0"
+      style={{
+        background: `linear-gradient(180deg, rgba(8, 21, 29, 0.00) 1.92%, #08151D 75.41%), url(${bg}) lightgray 50% / cover no-repeat`,
+      }}
+    >
       <Navbar
         setIsMobileSidebar={setIsMobileSidebar}
         isMobileSidebar={isMobileSidebar}
       />
-      <div
-        className="w-full overflow-auto bg-cover bg-center px-5 py-8 md:px-8 xl:px-[70px]"
-        style={{ backgroundImage: `url(${bg})` }}
-      >
+      <div className="main-content h-full! w-full overflow-auto bg-scroll px-5 py-8 md:px-8 xl:px-[70px]">
         <Header setIsMobileSidebar={setIsMobileSidebar} title={name} />
         {children}
       </div>

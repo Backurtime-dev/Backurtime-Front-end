@@ -21,7 +21,7 @@ export default function GroupItem({
       className={cn(
         "flex w-full cursor-pointer items-center justify-center rounded-2xl px-4 py-[9px]",
         isActiveGroup &&
-          "bg-[linear-gradient(120deg,#90D2F6_0%,#C2E8FD_1%,#00CDBD_90%,#009FAA_100%)]",
+          "bg-[linear-gradient(97deg,#90D2F6_5.72%,#009FAA_38.32%,#00CDBD_84.96%,#C2E8FD_110.09%)]",
       )}
       onClick={() => onGroupChange(name)}
     >

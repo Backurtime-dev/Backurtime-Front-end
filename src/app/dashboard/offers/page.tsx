@@ -100,13 +100,15 @@ export default function OffersPage() {
     <div className="flex w-full flex-col gap-12 py-8">
       <div className="flex w-full flex-col gap-8">
         <div
-          className="bg-blend-plus-lighter relative flex min-h-[268px] flex-col items-center justify-center gap-6 self-stretch rounded-[48px] px-5 pt-8 pb-[250px] bg-blend-normal xl:py-8"
+          className="bg-blend-plus-lighter relative flex min-h-[268px] flex-col items-center justify-center gap-6 self-stretch rounded-3xl px-4 pt-6 pb-[250px] bg-blend-normal sm:rounded-4xl sm:px-5 sm:pt-8 lg:rounded-[48px] xl:py-8"
           style={{
-            backgroundImage:
-              "linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1))",
+            backgroundImage: "url(/components/banner.png)",
+            backgroundPosition: "top",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
           }}
         >
-          <h1 className="font-cinzel text-shadow-green relative z-2 text-center text-[50px] leading-[122%] font-bold text-white">
+          <h1 className="font-cinzel text-shadow-green relative z-2 text-center text-3xl leading-[122%]! font-bold text-white md:text-4xl lg:text-5xl xl:text-[50px]">
             Every action gives you
             <br />
             <span className="flex flex-wrap items-center justify-center">
@@ -117,7 +119,7 @@ export default function OffersPage() {
                   alt="character"
                   width={80}
                   height={80}
-                  className="h-20 w-20 object-contain drop-shadow-white"
+                  className="h-12 w-12 object-contain drop-shadow-white md:h-14 md:w-14 lg:h-16 lg:w-16 xl:h-20 xl:w-20"
                 />
               </span>
               Time
@@ -136,13 +138,13 @@ export default function OffersPage() {
             src="/pages/offers/green-shadow-bottom-right.png"
             alt="shadow"
             fill
-            className="top-[inherit]! left-[inherit]! w-auto! rounded-br-[48px] xl:object-contain"
+            className="top-[inherit]! left-[inherit]! w-auto! rounded-br-3xl sm:rounded-br-4xl lg:rounded-br-[48px] xl:object-contain"
           />
           <Image
             src="/pages/offers/green-shadow-top-left.png"
             alt="shadow"
             fill
-            className="right-[inherit]! bottom-[inherit]! w-auto! rounded-tl-[48px] xl:object-contain"
+            className="right-[inherit]! bottom-[inherit]! w-auto! rounded-tl-3xl sm:rounded-tl-4xl lg:rounded-tl-[48px] xl:object-contain"
           />
         </div>
         <div className="mt-10 flex items-center justify-start gap-5 overflow-x-auto sm:justify-center xl:mt-0">
@@ -185,14 +187,14 @@ const StoneButton = ({ label = "label" }) => {
         {label}
       </span>
       <Image
-        src="/components/stone-btn-right.svg"
+        src="/components/stone-btn-right.svg" //"/components/stone-left-active.svg"
         alt="btn"
         width={16}
         height={64}
         className="absolute top-0 right-0 h-full min-h-16 w-4 object-cover object-right"
       />
       <Image
-        src="/components/stone-btn-bg.svg"
+        src="/components/stone-btn-bg.svg" //"/components/ston-active.svg" //
         alt="btn"
         width={20}
         height={64}

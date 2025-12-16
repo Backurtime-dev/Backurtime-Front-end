@@ -99,7 +99,8 @@ export default function Page() {
         <span className="font-semibold">Button</span>
         <div className="grid grid-cols-1 gap-3">
           <Button
-            className="h-12 w-12"
+            className="group h-12 w-12"
+            icon={<Icons.ArrowRight size={20} />}
             withBackgoundImage={true}
             backgroundImageUrl="/components/stone-rounded-btn.svg"
           />

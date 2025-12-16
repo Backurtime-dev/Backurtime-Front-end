@@ -71,14 +71,14 @@ export default function NavbarRoute({ route, isActive }: NavbarRouteProps) {
     };
 
     return icons[name];
-  }, [name, isActive]);
+  }, [name, isActive, isLarge]);
 
   return (
     <Fragment>
       <Link
         href={to}
         className={cn(
-          "group/nav hidden w-full items-center justify-start gap-x-6 rounded-2xl px-5 py-4 transition-all duration-300 ease-in-out sm:flex",
+          "group/nav hidden w-full items-center justify-center gap-x-6 rounded-2xl px-5 py-4 transition-all duration-300 ease-in-out sm:flex",
           "group-hover:justify-start group-hover:gap-x-6 group-hover:px-5",
           "xl:gap-x-0 xl:px-4",
           "hover:bg-white/10 hover:bg-[url(/components/route-item_active.png)] hover:bg-left hover:bg-no-repeat",
@@ -88,7 +88,7 @@ export default function NavbarRoute({ route, isActive }: NavbarRouteProps) {
       >
         <div
           className={cn(
-            "flex flex-shrink-0 items-center justify-center transition-all duration-300 ease-in-out group-hover:w-max",
+            "flex shrink-0 items-center justify-center transition-all duration-300 ease-in-out group-hover:w-max",
             isActive ? "text-white" : "text-grey-light",
           )}
         >
@@ -96,8 +96,8 @@ export default function NavbarRoute({ route, isActive }: NavbarRouteProps) {
         </div>
         <span
           className={cn(
-            "font-inter text-grey-light translate-x-0 overflow-hidden text-base font-medium whitespace-nowrap opacity-100 transition-all duration-300 ease-in-out xl:translate-x-[-8px] xl:opacity-0",
-            "group-hover:translate-x-0 group-hover:opacity-100",
+            "font-inter text-grey-light w-0 translate-x-0 overflow-hidden text-base font-medium whitespace-nowrap opacity-100 transition-all duration-300 ease-in-out xl:translate-x-[-8px] xl:opacity-0",
+            "group-hover:w-full group-hover:translate-x-0 group-hover:opacity-100",
             isActive && "text-white",
           )}
         >
@@ -135,16 +135,16 @@ export default function NavbarRoute({ route, isActive }: NavbarRouteProps) {
             {icon}
           </div>
         </div>
-        {name !== "offers" && (
-          <span
-            className={cn(
-              "font-inter text-grey-light overflow-hidden text-[10px] leading-[140%] font-normal tracking-[1%] whitespace-nowrap",
-              isActive && "text-white",
-            )}
-          >
-            {title}
-          </span>
-        )}
+
+        <span
+          className={cn(
+            "font-inter text-grey-light overflow-hidden text-[10px] leading-[140%] font-normal tracking-[1%] whitespace-nowrap",
+            isActive && "text-white",
+            name === "offers" && "hidden sm:block",
+          )}
+        >
+          {title}
+        </span>
       </Link>
     </Fragment>
   );
