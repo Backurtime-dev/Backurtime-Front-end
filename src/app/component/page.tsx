@@ -1,4 +1,4 @@
-import { FilterChips, Status } from "@/components/common";
+import { Button, FilterChips, Status } from "@/components/common";
 import Radio from "@/components/common/Radio";
 import {
   CardTag,
@@ -97,6 +97,13 @@ export default function Page() {
       {/* Button */}
       <div className="">
         <span className="font-semibold">Button</span>
+        <div className="grid grid-cols-1 gap-3">
+          <Button
+            className="h-12 w-12"
+            withBackgoundImage={true}
+            backgroundImageUrl="/components/stone-rounded-btn.svg"
+          />
+        </div>
       </div>
       <div className="grid w-full grid-cols-1 gap-4">
         <span>Radio</span>

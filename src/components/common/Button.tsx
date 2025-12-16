@@ -1,13 +1,14 @@
 "use client";
 
 import { cn } from "@/utils";
-import { ComponentProps } from "react";
+import { ComponentProps, ReactNode } from "react";
 
 interface ButtonProps extends ComponentProps<"button"> {
   withBackgoundImage?: boolean;
   withTextDecoration?: boolean;
   backgroundImageUrl?: string;
   title?: string;
+  icon?: ReactNode;
 }
 
 export default function Button({
@@ -19,6 +20,7 @@ export default function Button({
   withTextDecoration = false,
   disabled = false,
   onClick = () => {},
+  icon,
   ...props
 }: ButtonProps) {
   return (
@@ -29,7 +31,7 @@ export default function Button({
       className={cn(
         "flex w-full cursor-pointer items-center justify-center py-4 disabled:cursor-default disabled:grayscale",
         className,
-        withBackgoundImage && "bg-cover bg-center bg-no-repeat",
+        withBackgoundImage && "bg-cover! bg-center! bg-no-repeat!",
         withTextDecoration && "text-shadow-[1px_2px_0_rgba(35,63,50,0.5)]",
       )}
       style={{
@@ -39,6 +41,7 @@ export default function Button({
       }}
       {...props}
     >
+      {icon}
       {title}
     </button>
   );
