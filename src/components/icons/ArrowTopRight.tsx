@@ -16,18 +16,18 @@ const SvgArrowTopRight = ({ size = 24, ...props }: IconProps) => (
     <path
       d="M18.0204 14.8764L18.0204 6.29214L9.43609 6.29214"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.99978 18.313L17.9004 6.4124"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

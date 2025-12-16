@@ -14,16 +14,16 @@ const SvgLink = ({ size = 24, ...props }: IconProps) => (
     <path
       d="M13.0598 10.94C15.3098 13.19 15.3098 16.83 13.0598 19.07C10.8098 21.31 7.16985 21.32 4.92985 19.07C2.68985 16.82 2.67985 13.18 4.92985 10.94"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M10.59 13.41C8.24996 11.07 8.24996 7.27001 10.59 4.92001C12.93 2.57001 16.73 2.58001 19.08 4.92001C21.43 7.26001 21.42 11.06 19.08 13.41"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

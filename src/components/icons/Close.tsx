@@ -16,18 +16,18 @@ const SvgClose = ({ size = 24, ...props }: IconProps) => (
     <path
       d="M18.2957 5.58333L5.58301 18.296"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.7041 5.70395L18.4771 18.4167"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

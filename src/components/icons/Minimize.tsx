@@ -16,30 +16,30 @@ const SvgMinimize = ({ size = 24, ...props }: IconProps) => (
     <path
       d="M13.5 4.5L13.5 10.5L19.5 10.5"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M10.5 19.4999L10.5 13.4999L4.5 13.4999"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M20.5 3.5L13.5 10.5"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M10.5 13.5L3.5 20.5"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
