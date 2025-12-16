@@ -16,7 +16,6 @@ export { default as Time } from "./Time";
 export { default as More } from "./More";
 export { default as Top } from "./Top";
 export { default as Team } from "./Team";
-export { default as Ticket } from "./Ticket";
 export { default as Spore } from "./Spore";
 export { default as Apple } from "./Apple";
 export { default as ArrowLeftOne } from "./ArrowLeftOne";

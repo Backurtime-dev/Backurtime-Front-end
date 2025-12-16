@@ -16,11 +16,12 @@ const SvgArrowLeftOne = ({ size = 24, ...props }: IconProps) => (
     <path
       d="M12 19L5 12M5 12L12 5M5 12H19"
       stroke="#DCDCDC"
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
+
 export default SvgArrowLeftOne;

@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/tooltip";
 import React from "react";
 import * as Icons from "../../components/icons";
+import { FaqItem } from "@/components/common";
 
 export default function Page() {
   const iconComponents = [
@@ -34,7 +35,6 @@ export default function Page() {
     "More",
     "Top",
     "Team",
-    "Ticket",
     "Spore",
     "Apple",
     "ArrowLeftOne",
@@ -200,11 +200,11 @@ export default function Page() {
       <div className="grid w-full grid-cols-1 gap-4">
         <span className="font-semibold">Icons</span>
         <div className="flex flex-wrap items-center gap-3">
-          {iconComponents.map((iconName) => {
+          {iconComponents.map((iconName, index) => {
             const Icon = Icons[iconName as keyof typeof Icons];
             return (
               <div
-                key={iconName}
+                key={`${iconName}-${index}`} // ensures unique key
                 className="flex flex-col items-center gap-1 text-xs"
               >
                 <Icon />
@@ -212,6 +212,30 @@ export default function Page() {
               </div>
             );
           })}
+        </div>
+      </div>
+      <div className="grid w-full grid-cols-1 gap-4">
+        <span>FaqItem</span>
+        <div>
+          <FaqItem
+            content={[
+              {
+                title: "What is the Spuffy Collection?",
+                description:
+                  "The Spuffy Collection is your personal gallery of unique and charming Spuffy characters you've discovered or earned on Backurtime. Each Spuffy has its own story and adds a special flair to your profile!",
+              },
+              {
+                title: "What is the Spuffy Collection?",
+                description:
+                  "The Spuffy Collection is your personal gallery of unique and charming Spuffy characters you've discovered or earned on Backurtime. Each Spuffy has its own story and adds a special flair to your profile!",
+              },
+              {
+                title: "What is the Spuffy Collection?",
+                description:
+                  "The Spuffy Collection is your personal gallery of unique and charming Spuffy characters you've discovered or earned on Backurtime. Each Spuffy has its own story and adds a special flair to your profile!",
+              },
+            ]}
+          />
         </div>
       </div>
     </div>

@@ -5,7 +5,8 @@ import Checkbox from "./Checkbox";
 import { Navbar } from "./Navbar";
 import LogoHeading from "./LogoHeading";
 import ProfileButton from "./ProfileButton";
-
+import Radio from "./Radio";
+import FaqItem from "./FaqItem";
 import Toggle from "./Toggle";
 import { Tabs } from "./Tabs";
 import { Groups } from "./Groups";
@@ -25,4 +26,6 @@ export {
   Tabs,
   Groups,
   FilterChips,
+  Radio,
+  FaqItem,
 };
