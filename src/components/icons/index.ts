@@ -70,3 +70,4 @@ export { default as Reply } from "./Reply";
 export { default as Shield } from "./Shield";
 export { default as Telegram } from "./Telegram";
 export { default as UnArchive } from "./UnArchive";
+export { default as Document } from "./Document";

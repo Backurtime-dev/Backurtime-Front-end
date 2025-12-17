@@ -58,6 +58,7 @@ function TooltipContent({
           variant === "small"
             ? "rounded-full px-2 py-0.5 text-[10px]"
             : "rounded-md px-3 py-1.5 text-xs",
+          "bg-[linear-gradient(0deg,#FFFFFF,#FFFFFF),linear-gradient(180deg,rgba(0,0,0,0.2)_19.23%,rgba(0,0,0,0)_50%)]",
           className,
         )}
         {...props}

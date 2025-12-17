@@ -1,6 +1,14 @@
 import Image from "next/image";
 import { Progress } from "@/components/ui/progress";
 import { Status } from "@/components/common";
+import { cn } from "@/utils";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Apple, Clock, Document } from "@/components/icons";
+
 const OfferCard = ({
   image,
   title,
@@ -15,15 +23,57 @@ const OfferCard = ({
   stats2: number;
   stats3: string;
 }) => {
+  const platform = [
+    {
+      title: "",
+      icon: <Apple size={16} />,
+      content: "iOS system",
+    },
+    {
+      title: "",
+      icon: <Document size={16} />,
+      content: "Complete survey",
+    },
+    {
+      title: "20s",
+      icon: <Clock size={16} />,
+      content: "Estimated time",
+    },
+  ];
+
   return (
     <div className="flex w-full flex-col gap-3 rounded-4xl bg-gray-600 p-2 text-white">
-      <div className="relative aspect-video w-full">
-        <Image
-          src={image}
-          alt="Background"
-          fill
-          className="rounded-4xl object-cover object-center"
-        />
+      <div
+        className={cn(
+          "relative aspect-video w-full overflow-hidden rounded-4xl bg-cover! bg-no-repeat! p-[18px]",
+        )}
+        style={{
+          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(${image}) lightgray`,
+        }}
+      >
+        <div className="flex h-auto w-full items-center justify-end gap-1.5">
+          {platform.map((item, i) => (
+            <Tooltip key={i}>
+              <TooltipTrigger className="bg-primitives-black_50 hover:text-green-normal hover:[&>svg_path]:stroke-green-normal flex h-8 min-w-8 items-center gap-1 rounded-full px-2 py-1.5 text-white">
+                {item.icon}
+                {item.title && (
+                  <span className="font-inter text-base leading-[140%]! font-normal tracking-[16.px]">
+                    {item.title}
+                  </span>
+                )}
+              </TooltipTrigger>
+              <TooltipContent
+                sideOffset={12}
+                direction="top"
+                className="w-max rounded-[12px]! px-3 py-1.5"
+              >
+                <span className="font-inter text-black-normal text-base leading-[140%]! font-normal tracking-[.16px]">
+                  {item.content}
+                </span>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </div>
       </div>
       <div className="px-4 pt-2 pb-3">
         <h2 className="font-cinzel motion-safe mb-2 text-[20px] leading-[120%] font-bold tracking-[.2px] uppercase">

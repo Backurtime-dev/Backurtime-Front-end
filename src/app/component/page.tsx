@@ -15,6 +15,9 @@ import {
 import React from "react";
 import * as Icons from "../../components/icons";
 import { FaqItem } from "@/components/common";
+import MissionCard from "@/components/cards/mission_card";
+import OnboardingCard from "@/components/cards/onboarding_card";
+import BonusCard from "@/components/cards/bonus_card";
 
 export default function Page() {
   const iconComponents = [
@@ -116,8 +119,8 @@ export default function Page() {
         <span>Radio</span>
         <div className="grid grid-cols-1 gap-3">
           <Radio label="Default" />
-          <Radio label="Active" checked />
-          <Radio label="Active & Done" done />
+          <Radio label="Active" checked readOnly />
+          <Radio label="Active & Done" checked readOnly done />
         </div>
       </div>
 
@@ -218,7 +221,7 @@ export default function Page() {
             const Icon = Icons[iconName as keyof typeof Icons];
             return (
               <div
-                key={`${iconName}-${index}`} // ensures unique key
+                key={`${iconName}-${index}`}
                 className="flex flex-col items-center gap-1 text-xs"
               >
                 <Icon />
@@ -229,7 +232,7 @@ export default function Page() {
         </div>
       </div>
       <div className="grid w-full grid-cols-1 gap-4">
-        <span>FaqItem</span>
+        <span className="font-bold">FaqItem</span>
         <div>
           <FaqItem
             content={[
@@ -250,6 +253,55 @@ export default function Page() {
               },
             ]}
           />
+        </div>
+      </div>
+      <div className="grid w-full grid-cols-1 gap-4">
+        <span className="font-bold">Misson Card</span>
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <MissionCard
+            description="Visit the rewards section to claim your reward."
+            icon="/icons/small-badge.svg"
+            title="Visit rewards"
+            progress={1}
+            isCompleted={false}
+          />
+          <MissionCard
+            description="Visit the rewards section to claim your reward."
+            icon="/icons/small-badge.svg"
+            title="Visit rewards"
+            progress={0.5}
+            isCompleted={false}
+          />
+          <MissionCard
+            description="Visit the rewards section to claim your reward."
+            icon="/icons/small-badge.svg"
+            title="Visit rewards"
+            progress={1}
+            isCompleted={true}
+          />
+        </div>
+      </div>
+      <div className="grid w-full grid-cols-1 gap-4">
+        <span className="font-bold">Onboarding Card</span>
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <OnboardingCard
+            image="/components/onbording-card-image.png"
+            title="Psychodelic"
+            description="Lorem ipsum dolor sit amet, adipiscing elit sed do eiusmod tempor."
+            selected={false}
+          />
+          <OnboardingCard
+            image="/components/onbording-card-image.png"
+            title="Psychodelic"
+            description="Lorem ipsum dolor sit amet, adipiscing elit sed do eiusmod tempor."
+            selected={true}
+          />
+        </div>
+      </div>
+      <div className="grid w-full grid-cols-1 gap-4">
+        <span className="font-bold">Bonus Card</span>
+        <div className="w-full">
+          <BonusCard title="Text" icon="/icons/bonus-card.svg" />
         </div>
       </div>
     </div>
