@@ -41,7 +41,7 @@ const OfferCard = ({
           </div>
           {progress < 100 && <Progress value={progress} />}
         </div>
-        <div className="flex w-full items-center justify-between gap-4">
+        <div className="flex w-full flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-2">
               <Image
@@ -68,7 +68,11 @@ const OfferCard = ({
           </div>
 
           {progress < 100 ? null : (
-            <Status text="Your content" status={"completed"} />
+            <Status
+              text="Your content"
+              status={"completed"}
+              className="ml-auto"
+            />
           )}
         </div>
       </div>

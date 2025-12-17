@@ -8,9 +8,17 @@ interface TypeProps {
   rounded?: boolean;
   status?: "completed" | "in-completed";
   type?: "silver" | "gold" | "green" | "blue";
+  className?: string;
 }
 
-const Status = ({ icon, text, type, rounded, status }: TypeProps) => {
+const Status = ({
+  icon,
+  text,
+  type,
+  rounded,
+  status,
+  className,
+}: TypeProps) => {
   function getColorType(type?: string) {
     switch (type) {
       case "silver":
@@ -33,6 +41,7 @@ const Status = ({ icon, text, type, rounded, status }: TypeProps) => {
   return (
     <div
       className={cn(
+        className,
         "flex w-max items-center justify-center p-[1.5px] pl-[1.8px]!",
         rounded ? "rounded-full" : "rounded-[12px]",
         getColorType(type),
