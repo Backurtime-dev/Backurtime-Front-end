@@ -44,7 +44,7 @@ export default function TabsDetails({
   }, [currentTab, inProgress, completed]);
 
   return (
-    <div className="flex w-full flex-col gap-10">
+    <div className="flex w-full flex-col gap-6 sm:gap-10">
       <div className="flex w-full flex-col items-center gap-6 md:flex-row">
         <Tabs
           tabs={[

@@ -238,6 +238,15 @@
     rgba(6, 83, 88, 0.3);
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @import "./fonts.css";
 @import "./colors.css";
 @import "./breakpoint.css";

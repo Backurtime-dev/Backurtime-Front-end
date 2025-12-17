@@ -55,7 +55,7 @@ export default function DashboardLayout({
         setIsMobileSidebar={setIsMobileSidebar}
         isMobileSidebar={isMobileSidebar}
       />
-      <div className="main-content h-full! w-full overflow-auto bg-scroll px-5 py-8 md:px-8 xl:px-[70px]">
+      <div className="main-content h-full! w-full overflow-auto bg-scroll px-4 py-4 md:px-8 xl:px-[70px]">
         <Header setIsMobileSidebar={setIsMobileSidebar} title={name} />
         {children}
       </div>

@@ -1,3 +1,3 @@
 import { TabsDetails } from "./TabsDetails";
-
-export { TabsDetails };
+import Banner from "./Banner";
+export { TabsDetails, Banner };

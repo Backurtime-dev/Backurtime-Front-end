@@ -104,6 +104,12 @@ export default function Page() {
             withBackgoundImage={true}
             backgroundImageUrl="/components/stone-rounded-btn.svg"
           />
+          <Button className="w-max" title="secondary" variant="primary" />
+          <Button
+            className="w-max"
+            title="Access The Subscription "
+            variant="secondary"
+          />
         </div>
       </div>
       <div className="grid w-full grid-cols-1 gap-4">
