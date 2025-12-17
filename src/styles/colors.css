@@ -15,6 +15,7 @@
   --color-primitives-white_10: rgba(255, 255, 255, 0.1);
   --color-primitives-white_20: rgba(255, 255, 255, 0.2);
   --color-primitives-white_30: rgba(255, 255, 255, 0.3);
+  --color-primitives-green: #90d2f6;
   --color-primitives-grey_900: #262f38;
   --color-primitives-grey_800: rgba(24, 29, 40, 0.88);
   --color-deep-teal: rgba(0, 78, 79, 0.5);
@@ -33,6 +34,7 @@
   --text-shadow-dark-small: 0 4px 0 rgba(0, 0, 0, 0.5);
   --shadow-white: 0px 4px 20px 0px rgba(235, 255, 253, 1);
   --drop-shadow-icon-sm: 0 4px 10px rgba(235, 255, 255, 0.8);
+  --drop-shadow-icon-md: 0 4px 12px rgba(235, 255, 253, 1);
   --shadow-stone:
     0 4px 81.9px 0 rgba(54, 255, 255, 0.2) inset,
     0 -2px 5px 0 rgba(54, 255, 255, 0.4) inset,

@@ -54,7 +54,13 @@ const MissionCard = ({
 
         <div className="flex items-center justify-between gap-2">
           <div className="flex items-center gap-2">
-            <Image src={icon} alt="reward" width={40} height={40} />
+            <Image
+              src={icon}
+              alt="reward"
+              width={40}
+              height={40}
+              className="drop-shadow-icon-sm"
+            />
             <span className="font-cinzel text-[14px] leading-[120%]! font-bold text-white sm:text-base">
               125
             </span>
