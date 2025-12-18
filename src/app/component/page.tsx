@@ -21,6 +21,7 @@ import BonusCard from "@/components/cards/bonus_card";
 import RankCard from "@/components/cards/RankCard";
 import WoodenCard from "@/components/cards/WoodenCard";
 import PrizeCard from "@/components/cards/PrizeCard";
+import { SubscriptionCard } from "@/components/cards/SubscriptionSettingCard";
 
 export default function Page() {
   const iconComponents = [
@@ -379,6 +380,19 @@ export default function Page() {
           campaignName="Cyber monday"
           productName="iPhone 16 Pro"
           rarity="Common"
+        />
+      </div>
+      <span className="font-bold">Subscription Setting Card</span>
+      <div className="grid w-full grid-cols-1 gap-4">
+        <SubscriptionCard
+          name="Netflix"
+          logoUrl="/components/subcription-setting-icon.svg"
+          isOwner={true}
+        />
+        <SubscriptionCard
+          name="Netflix"
+          logoUrl="/components/subcription-setting-icon.svg"
+          isOwner={false}
         />
       </div>
     </div>
