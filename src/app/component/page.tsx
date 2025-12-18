@@ -20,6 +20,7 @@ import OnboardingCard from "@/components/cards/onboarding_card";
 import BonusCard from "@/components/cards/bonus_card";
 import RankCard from "@/components/cards/RankCard";
 import WoodenCard from "@/components/cards/WoodenCard";
+import LiveDonateCard from "@/components/cards/LiveDonateCard";
 
 export default function Page() {
   const iconComponents = [
@@ -111,7 +112,7 @@ export default function Page() {
           />
           <Button className="w-max" title="secondary" variant="primary" />
           <Button
-            className="w-max"
+            className="w-full"
             title="Access The Subscription "
             variant="secondary"
           />
@@ -344,7 +345,7 @@ export default function Page() {
             clanname="Clanname"
             username="Username"
             level={10}
-            rank="sliver"
+            rank="silver"
             points={150}
             className="w-[273px]"
           />
@@ -357,6 +358,26 @@ export default function Page() {
 
           <span>mobile</span>
           <WoodenCard label="Total members" TotalMembers={20} small />
+        </div>
+      </div>
+      <div className="grid w-full grid-cols-1 gap-4">
+        <span className="font-bold">Live Donate Card</span>
+        <div className="flex w-full gap-8">
+          <LiveDonateCard
+            donate={500}
+            level={21}
+            userImage={"/icons/badge/user-placeholder.svg"}
+          />
+          <LiveDonateCard
+            donate={10000}
+            level={21}
+            userImage={"/icons/badge/user-placeholder.svg"}
+          />
+          <LiveDonateCard
+            donate={50000}
+            level={21}
+            userImage={"/icons/badge/user-placeholder.svg"}
+          />
         </div>
       </div>
     </div>

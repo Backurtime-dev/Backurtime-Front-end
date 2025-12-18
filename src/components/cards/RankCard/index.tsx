@@ -7,7 +7,7 @@ interface TypesProps {
   clanname?: string;
   username?: string;
   level?: number | string;
-  rank?: "sliver" | "gold" | "green" | "gold-crown" | "cuper";
+  rank?: "gold" | "green" | "blue" | "silver" | "cuper";
   points?: number | string;
   className?: string;
 }
@@ -16,7 +16,7 @@ const RankCard = ({
   clanname,
   username,
   level,
-  rank = "sliver",
+  rank = "silver",
   points,
   className,
 }: TypesProps) => {

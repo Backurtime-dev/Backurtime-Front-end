@@ -1,8 +1,8 @@
 "use client";
 
+import { ComponentProps, ReactNode } from "react";
 import { cn } from "@/utils";
 import Image from "next/image";
-import { ComponentProps, ReactNode } from "react";
 
 interface ButtonProps extends ComponentProps<"button"> {
   withBackgoundImage?: boolean;
@@ -34,9 +34,9 @@ export default function Button({
       className={cn(
         "font-cinzel relative flex min-h-12 w-full cursor-pointer items-center justify-center py-4 text-lg leading-[122%]! font-bold text-white disabled:cursor-default disabled:grayscale",
         variant === "secondary" &&
-          "px-12! py-[13px]! before:absolute before:top-0 before:left-5 before:h-full before:w-[calc(100%-40px)] before:bg-[url(/components/secondary-button/top.svg)] before:bg-auto before:bg-left before:bg-repeat-x",
+          `px-12! py-[13px]! before:absolute before:top-0 before:left-5 before:h-full before:w-[calc(100%-40px)] before:bg-[url(/components/secondary-button/top.svg)] before:bg-contain before:bg-top before:bg-repeat-x`,
         variant === "secondary" &&
-          "after:absolute after:top-0 after:left-5 after:h-full after:w-[calc(100%-40px)] after:bg-[url(/components/secondary-button/bottom.svg)] after:bg-auto after:bg-left after:bg-repeat-x",
+          `after:absolute after:top-0 after:left-5 after:h-full after:w-[calc(100%-40px)] after:bg-[url(/components/secondary-button/bottom.svg)] after:bg-contain after:bg-bottom after:bg-repeat-x`,
         className,
         withBackgoundImage && "bg-cover! bg-center! bg-no-repeat!",
         withTextDecoration && "text-shadow-[1px_2px_0_rgba(35,63,50,0.5)]",

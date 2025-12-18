@@ -4,7 +4,7 @@ import Image from "next/image";
 
 interface TypeProps {
   icon?: boolean;
-  text?: string;
+  text?: string | number;
   rounded?: boolean;
   status?: "completed" | "in-completed";
   type?: "silver" | "gold" | "green" | "blue";

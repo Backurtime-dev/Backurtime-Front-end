@@ -1,6 +1,7 @@
 "use client";
 
 import AchievementsCard from "@/components/cards/achievements_card";
+import StoneCard from "@/components/cards/StoneCard";
 import { NeonText, Toggle } from "@/components/common";
 import { User } from "@/types/user";
 import { customFetch } from "@/utils";
@@ -216,35 +217,14 @@ export default function ProfileInformation() {
           <span className="font-cinzel text-xl leading-[120%] font-bold text-white uppercase">
             My statistic
           </span>
-          <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-x-5 sm:gap-y-4 md:gap-x-8">
+          <div className="xsm:grid-cols-2 grid w-full grid-cols-1 gap-3 sm:gap-x-5 sm:gap-y-4 md:gap-x-8">
             {PROFILE_STATISTIC.map((ps, index) => (
-              <div
-                key={ps.id}
-                className="relative flex min-h-[77px] w-full items-center gap-x-4 bg-[url(/pages/profile/profile_statistic_border.webp)] bg-size-[99%_100%] bg-no-repeat py-3 pr-6 pl-4 sm:gap-x-5"
-              >
-                <Image
-                  src="/pages/profile/profile_statistic_border_right.svg"
-                  width={48}
-                  height={48}
-                  alt={`statistic image ${index}`}
-                  className="absolute top-0 right-0 z-1 h-full w-[22px] object-cover"
-                />
-                <Image
-                  src={ps.image}
-                  width={48}
-                  height={48}
-                  alt={`statistic image ${index}`}
-                  className="drop-shadow-icon-sm h-12 w-12 object-contain"
-                />
-                <div className="gap-y-.5 relative z-2 flex flex-col">
-                  <span className="font-cinzel text-2xl font-bold text-white text-shadow-[1px_6px_10.2px_rgba(0,255,234,0.3)]">
-                    {ps.value}
-                  </span>
-                  <span className="font-inter text-base font-normal text-white">
-                    {ps.title}
-                  </span>
-                </div>
-              </div>
+              <StoneCard
+                key={index}
+                image={ps.image}
+                value={ps.value}
+                title={ps.title}
+              />
             ))}
           </div>
         </div>

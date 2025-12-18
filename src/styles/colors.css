@@ -12,6 +12,7 @@
   --color-dark: #181d28;
   --color-dark-normal: #08151d;
   --color-white-10: rgba(255, 255, 255, 0.05);
+  --color-primitives-white_5: rgba(255, 255, 255, 0.05);
   --color-primitives-white_10: rgba(255, 255, 255, 0.1);
   --color-primitives-white_20: rgba(255, 255, 255, 0.2);
   --color-primitives-white_30: rgba(255, 255, 255, 0.3);
@@ -36,6 +37,8 @@
   --drop-shadow-icon-sm: 0 4px 10px rgba(235, 255, 255, 0.8);
   --drop-shadow-offer-banner-img: 10px -13px 20px rgba(0, 255, 195, 0.1);
   --drop-shadow-icon-md: 0 4px 12px rgba(235, 255, 253, 1);
+  --drop-shadow-icon-md2: 0 4px 20px #ebfffd;
+  --drop-shadow-icon-gold: 0 8px 10px rgba(241, 158, 19, 0.5);
   --shadow-stone:
     0 4px 81.9px 0 rgba(54, 255, 255, 0.2) inset,
     0 -2px 5px 0 rgba(54, 255, 255, 0.4) inset,
@@ -44,7 +47,7 @@
   --drop-shadow-white: 0 0 30px #fff;
   --shadow-dark: 0px 4px 20px 0px rgba(255, 255, 255, 0.1) inset;
   --shadow-dark-sm: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
-
+  --shadow-sm-dark: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   --shadow-light-sm: 0 1px 0 0 rgba(255, 255, 255, 0.3) inset;
   --shadow-green-sm: 0 4px 50px 0 rgba(54, 255, 255, 0.4);
   --shadow-button: 1px 0px 10.2px 0px rgba(0, 255, 234, 0.6);
