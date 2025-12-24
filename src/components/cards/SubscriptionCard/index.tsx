@@ -7,6 +7,9 @@ interface SubscriptionCardProps {
   logo: string;
   name: string;
   variant?: SubscriptionCardVariant;
+  price?: number;
+  className?: string;
+  billingPeriod?: string;
 }
 
 const glowGradientMap: Record<SubscriptionCardVariant, string> = {
@@ -30,9 +33,17 @@ const SubscriptionCard = ({
   logo,
   name,
   variant = "gold",
+  className,
+  price,
+  billingPeriod = "/month",
 }: SubscriptionCardProps) => {
   return (
-    <div className="bg-primitives-white_5 relative flex w-full flex-col gap-5 overflow-hidden rounded-[42px] p-2">
+    <div
+      className={cn(
+        "bg-primitives-white_5 relative flex w-full flex-col gap-4 overflow-hidden rounded-[42px] p-2 sm:gap-5",
+        className,
+      )}
+    >
       <div
         className={cn(
           "absolute top-14 left-1/2 h-[137px] w-[276px] -translate-x-1/2 rounded-[276px] opacity-[0.3] blur-[68px]",
@@ -40,14 +51,14 @@ const SubscriptionCard = ({
         )}
       />
 
-      <div className="border-primitives-white_30 shadow-dark-sm relative min-h-40 w-full overflow-hidden rounded-[38px] border backdrop-blur-[10px]">
-        <div className="flex h-full min-h-40 w-full items-center justify-center">
+      <div className="border-primitives-white_30 shadow-dark-sm relative h-[120px] w-full overflow-hidden rounded-[38px] border backdrop-blur-[10px] sm:h-40">
+        <div className="flex h-full w-full items-center justify-center">
           <Image
             src={logo}
             width={64}
             height={64}
             alt="subscription-logo"
-            className="object-contain"
+            className="h-auto! w-auto! object-contain"
           />
         </div>
 
@@ -62,7 +73,7 @@ const SubscriptionCard = ({
           src="/pages/profile/layer.png"
           fill
           alt="texture"
-          className="object-cover opacity-5"
+          className="object-cover opacity-3"
         />
       </div>
 
@@ -71,12 +82,12 @@ const SubscriptionCard = ({
           {name}
         </p>
 
-        <p className="font-inter text-grey-light text-base leading-[140%] font-normal tracking-[.16px]">
-          From{" "}
-          <span className="text-2xl leading-[135%] font-semibold text-white">
-            € 2.66
-          </span>{" "}
-          /month
+        <p className="font-inter text-grey-light flex items-center gap-[5px] text-xs leading-[140%] font-normal tracking-[.12px] sm:text-base sm:tracking-[.16px]">
+          From
+          <span className="text-[20px] leading-[135%] font-semibold text-white sm:text-2xl">
+            €{price}
+          </span>
+          {billingPeriod}
         </p>
       </div>
     </div>

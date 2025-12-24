@@ -1025,26 +1025,30 @@ export default function Page() {
         <ShareSubscriptItem iconSrc="/icons/spotify.svg" />
       </div>
       <span className="font-bold">Subscription Card</span>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         <SubscriptionCard
           logo="/icons/youtub-white.svg"
           name="YouTube Premium"
           variant="green"
+          price={3.99}
         />
         <SubscriptionCard
           logo="/icons/youtub-white.svg"
           name="YouTube Premium"
           variant="gold"
+          price={3.99}
         />
         <SubscriptionCard
           logo="/icons/youtub-white.svg"
           name="YouTube Premium"
           variant="blue"
+          price={2.66}
         />
         <SubscriptionCard
           logo="/icons/youtub-white.svg"
           name="YouTube Premium"
           variant="silver"
+          price={1.99}
         />
       </div>
 
