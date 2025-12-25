@@ -1083,8 +1083,22 @@ export default function Page() {
         />
       </div>
       <span className="font-bold">Mystery Card</span>
-      <div className="w-max">
-        <MysteryCard />
+      <div className="flex w-max gap-4">
+        <MysteryCard
+          type="tick"
+          count={1}
+          iconSrc="/icons/mystery-tick-icon.svg"
+        />
+        <MysteryCard
+          type="cross"
+          count={1}
+          iconSrc="/icons/mystery-cross-icon.svg"
+        />
+        <MysteryCard
+          type="lock"
+          count={1}
+          iconSrc="/icons/mystery-lock-icon.svg"
+        />
       </div>
 
       <span className="font-bold">Payment Method Add Details Card</span>
