@@ -27,6 +27,7 @@
   --color-dark-60: #2f343d;
   --color-gray-10: #454951;
   --color-primitives-black_50: rgba(8, 21, 29, 0.5);
+  --color-primitives-black_80: rgba(8, 21, 29, 0.8);
   --color-primitives-grey_200: #ababab;
 
   /* shadow */
@@ -42,7 +43,9 @@
   --drop-shadow-icon-gold: 0 8px 10px rgba(241, 158, 19, 0.5);
   --drop-shadow-medallions-gold: 0px 6.16px 9.24px #eab02066;
   --drop-shadow-icon-gold-lg: 0 3px 40px #ffb042;
+  --drop-shadow-lock-icon: 0 3px 6px rgba(255, 255, 255, 0.25);
   --drop-shadow-key-gold: 1.195px 7.171px 8px rgba(212, 139, 32, 0.6);
+  --drop-shadow-gift-card: 0 4px 4px rgba(0, 0, 0, 0.25);
   --shadow-key-gold: 0 2.39px 4.781px 0 #d2ab68 inset;
   --shadow-stone:
     0 4px 81.9px 0 rgba(54, 255, 255, 0.2) inset,
