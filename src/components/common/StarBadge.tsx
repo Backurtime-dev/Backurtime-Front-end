@@ -7,6 +7,7 @@ type StarBadgeProps = {
   className?: string;
   bgWhite?: boolean;
   size?: "small" | "medium" | "large";
+  imageClassName?: string;
 };
 
 export default function StarBadge({
@@ -15,6 +16,7 @@ export default function StarBadge({
   className,
   bgWhite = false,
   size = "large",
+  imageClassName,
 }: StarBadgeProps) {
   return (
     <div
@@ -55,6 +57,7 @@ export default function StarBadge({
         width={41}
         height={41}
         className={cn(
+          imageClassName,
           `absolute rounded-full object-contain object-center`,
           size === "large" &&
             "top-[inherit] bottom-[3.3px] left-[3px] h-[calc(100%-9.7px)]! w-[calc(100%-6px)]! sm:top-2.5 sm:bottom-[inherit] sm:left-[5.5px] sm:h-[calc(100%-15px)]! sm:w-[calc(100%-11px)]!",

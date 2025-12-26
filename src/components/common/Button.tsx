@@ -1,6 +1,6 @@
 "use client";
 
-import { ComponentProps, ReactNode } from "react";
+import React, { ComponentProps, ReactNode } from "react";
 import { cn } from "@/utils";
 import Image from "next/image";
 
@@ -48,7 +48,16 @@ export default function Button({
       }}
       {...props}
     >
-      {icon}
+      {typeof icon === "string" && (
+        <Image
+          src={icon as string}
+          alt={icon as string}
+          width={20}
+          height={20}
+          className="shrink-0 object-contain"
+        />
+      )}
+      {React.isValidElement(icon) && icon}
       {title}
 
       {variant === "secondary" ? (

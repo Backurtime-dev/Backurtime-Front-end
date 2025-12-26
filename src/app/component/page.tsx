@@ -46,6 +46,8 @@ import MysteryCard from "@/components/cards/MysteryCard";
 import PaymentMethodAddDetailsCard from "@/components/cards/PaymentMethodAddDetailsCard";
 import PaymentMethodSelectedCard from "@/components/cards/PaymentMethodSelectedCard";
 import SelectPlanCard from "@/components/cards/SelectPlanCard";
+import GiftCard from "@/components/cards/GiftCard";
+import AwardCard from "@/components/cards/AwardCard";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -1133,6 +1135,49 @@ export default function Page() {
         <SelectPlanCard
           variant="onboarding-plan"
           planImage="/icons/clock-3d.svg"
+        />
+      </div>
+      <span className="font-bold">Gift Card</span>
+      <div className="mb-12 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+        <GiftCard
+          iconSrc="/icons/apple-icon.svg"
+          name="Google gift card"
+          variant="gold"
+        />
+        <GiftCard
+          iconSrc="/icons/apple-icon.svg"
+          name="Google gift card"
+          variant="green"
+        />
+        <GiftCard
+          iconSrc="/icons/apple-icon.svg"
+          name="Google gift card"
+          variant="silver"
+        />
+        <GiftCard
+          iconSrc="/icons/apple-icon.svg"
+          name="Google gift card"
+          variant="blue"
+        />
+      </div>
+      <span className="font-bold">Award Card</span>
+      <div className="mb-12 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
+        <AwardCard
+          selected={false}
+          prizeName="Premium Headphones"
+          referralsText="100"
+        />
+        <AwardCard
+          selected={true}
+          prizeName="Premium Headphones"
+          referralsText="100"
+        />
+        <AwardCard
+          prizeName="Premium Headphones"
+          isLock
+          lockPrizeName="$500 amazon Card"
+          referralsText="50"
+          lockPrizeTicket={1}
         />
       </div>
     </div>
