@@ -53,7 +53,7 @@ const Dialog: React.FC<DialogProps> = ({ isOpen, closeDialog, children }) => {
       onClick={handleOverlayClick}
     >
       <div
-        className={`flex h-full transform items-center justify-center transition-all duration-300 ${
+        className={`flex h-full transform items-center justify-center p-4 transition-all duration-300 ${
           isOpen ? "scale-100" : "scale-95"
         }`}
         // Prevent the click event from propagating to the overlay
@@ -67,7 +67,7 @@ const Dialog: React.FC<DialogProps> = ({ isOpen, closeDialog, children }) => {
             onClick={closeDialog}
             withBackgoundImage
             backgroundImageUrl="/icons/close-stone-icon.svg"
-            className="absolute -top-4 right-0 min-h-16! w-max min-w-16!"
+            className="absolute -top-4 right-0 z-2 min-h-8! w-max min-w-8! bg-contain! p-0! sm:min-h-16! sm:min-w-16!"
           />
           {children}
         </div>

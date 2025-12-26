@@ -33,7 +33,33 @@ const CoSubscribersTable = () => {
         )}
       </div>
       <Dialog isOpen={isDialogOpen} closeDialog={closeDialog}>
-        <DeleteCoSubscriberContent />
+        {/* <DeleteCoSubscriberContent
+          variant="delete-co-subscriber"
+          onClick={() => {
+            alert("Remain");
+          }}
+          onDelete={() => {
+            alert("Delete Forever");
+          }}
+        /> */}
+        {/* <DeleteCoSubscriberContent
+          variant="remove-netflix-premium"
+          onClick={() => {
+            alert("Cancel");
+          }}
+          onDelete={() => {
+            alert("Remove");
+          }}
+        /> */}
+        <DeleteCoSubscriberContent
+          variant="public-subscription"
+          onClick={() => {
+            alert("Make Public");
+          }}
+          onDelete={() => {
+            alert("Cancel");
+          }}
+        />
       </Dialog>
     </Fragment>
   );
