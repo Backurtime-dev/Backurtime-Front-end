@@ -46,6 +46,8 @@
   --drop-shadow-lock-icon: 0 3px 6px rgba(255, 255, 255, 0.25);
   --drop-shadow-key-gold: 1.195px 7.171px 8px rgba(212, 139, 32, 0.6);
   --drop-shadow-gift-card: 0 4px 4px rgba(0, 0, 0, 0.25);
+  --drop-shadow-flag-card-red: 0 4px 20px rgba(255, 60, 60, 0.25);
+  --drop-shadow-flag-card-brown: 0 4px 20px rgba(236, 179, 94, 0.25);
   --shadow-key-gold: 0 2.39px 4.781px 0 #d2ab68 inset;
   --shadow-stone:
     0 4px 81.9px 0 rgba(54, 255, 255, 0.2) inset,

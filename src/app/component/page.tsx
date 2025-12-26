@@ -43,14 +43,12 @@ import SubscriptionCard from "@/components/cards/SubscriptionCard";
 import PaymentMethodAddDetailsCard from "@/components/cards/PaymentMethodAddDetailsCard";
 import PaymentMethodSelectedCard from "@/components/cards/PaymentMethodSelectedCard";
 import SelectPlanCard from "@/components/cards/SelectPlanCard";
-<<<<<<< HEAD
 import GiftCard from "@/components/cards/GiftCard";
 import AwardCard from "@/components/cards/AwardCard";
-=======
 import ServeyCard from "@/components/cards/ServeyCard";
 import BuyMoreCard from "@/components/cards/BuyMoreCard";
 import MysteryCard from "@/components/cards/MysteryCard";
->>>>>>> 3ca0477a134d110edfa889f35e8f87791b31eace
+import FlagCard from "@/components/cards/FlagCard";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -1181,6 +1179,21 @@ export default function Page() {
           lockPrizeName="$500 amazon Card"
           referralsText="50"
           lockPrizeTicket={1}
+        />
+      </div>
+      <span className="font-bold">Flag Card</span>
+      <div className="grid grid-cols-1 gap-10">
+        <FlagCard
+          title="AMANIS"
+          progressText={90}
+          labelSrc="/components/clan-label-red.svg"
+          variant="red"
+        />
+        <FlagCard
+          title="AMANIS"
+          progressText={90}
+          labelSrc="/components/clan-label-brown.svg"
+          variant="brown"
         />
       </div>
     </div>
