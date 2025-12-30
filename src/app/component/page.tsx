@@ -2,6 +2,7 @@
 
 import {
   Button,
+  DragAndDrop,
   FilterChips,
   PriceCounter,
   ShareSubscriptItem,
@@ -54,6 +55,8 @@ import CheckList from "@/components/lists/CheckList";
 import DropDownMenu from "@/components/lists/DropdownMenu";
 import HeaderMenuList from "@/components/lists/HeaderMenuList";
 import HeaderMenuItem from "@/components/common/HeaderMenuItem";
+import WoodenTimer from "@/components/timer/WoodenTimer";
+import Counter from "@/components/timer/Counter";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -74,7 +77,8 @@ export default function Page() {
     { label: 101, iconSrc: "/icons/clock-3d.svg" },
     { label: 102, iconSrc: "/icons/clock-3d.svg" },
   ];
-
+  const newYear2026 = new Date("2026-01-01T00:00:00");
+  const launchDate = new Date("2026-01-10T00:00:00");
   const paymentMethods = [
     {
       id: "time-balance-1",
@@ -1260,6 +1264,24 @@ export default function Page() {
       <span className="font-bold">Header Menu</span>
       <div className="flex gap-10">
         <HeaderMenuList items={menuItems} />
+      </div>
+      <span className="font-bold">Drag & Drop</span>
+      <div className="flex gap-10">
+        <DragAndDrop
+          label="Upload document"
+          onFileChange={(file) => {
+            if (file) console.log("Uploaded:", file.name);
+          }}
+        />
+      </div>
+      <span className="font-bold">Wooden Timer</span>
+      <div className="flex gap-10">
+        <WoodenTimer targetDate={newYear2026} />
+      </div>
+      <span className="font-bold">Counter</span>
+      <div className="flex flex-col gap-10 sm:flex-row">
+        <Counter targetDate={launchDate} variant="box" />
+        <Counter targetDate={launchDate} variant="flat" />
       </div>
     </div>
   );

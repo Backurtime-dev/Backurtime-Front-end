@@ -16,6 +16,7 @@ import GlassPanel from "./GlassPanel";
 import StarBadge from "./StarBadge";
 import PriceCounter from "./PriceCounter";
 import ShareSubscriptItem from "./ShareSubscriptItem";
+import DragAndDrop from "./DragAndDrop";
 
 export {
   Status,
@@ -36,4 +37,5 @@ export {
   StarBadge,
   PriceCounter,
   ShareSubscriptItem,
+  DragAndDrop,
 };
