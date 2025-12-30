@@ -62,6 +62,7 @@ import HeaderMenuList from "@/components/lists/HeaderMenuList";
 import HeaderMenuItem from "@/components/common/HeaderMenuItem";
 import WoodenTimer from "@/components/timer/WoodenTimer";
 import Counter from "@/components/timer/Counter";
+import ShopCard from "@/components/cards/ShopCard";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -1384,6 +1385,15 @@ export default function Page() {
       <div className="flex flex-col gap-10 sm:flex-row">
         <Counter targetDate={launchDate} variant="box" />
         <Counter targetDate={launchDate} variant="flat" />
+      </div>
+      <span className="font-bold">Shop Card</span>
+      <div className="grid grid-cols-1 sm:grid-cols-3">
+        <ShopCard
+          imageUrl="/components/shop-card-image.png"
+          title="Psychodelic"
+          price="price"
+          iconSrc="/components/shop-card-romantic.svg"
+        />
       </div>
     </div>
   );
