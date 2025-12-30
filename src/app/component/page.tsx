@@ -51,6 +51,11 @@ import BuyMoreCard from "@/components/cards/BuyMoreCard";
 import MysteryCard from "@/components/cards/MysteryCard";
 import Image from "next/image";
 import FlagCard from "@/components/cards/FlagCard";
+import {
+  ClanProgress,
+  PersonalProgress,
+  RewardsProgress,
+} from "@/components/common/ProgressIndicators";
 import CheckList from "@/components/lists/CheckList";
 import DropDownMenu from "@/components/lists/DropdownMenu";
 import HeaderMenuList from "@/components/lists/HeaderMenuList";
@@ -1230,40 +1235,137 @@ export default function Page() {
           variant="brown"
         />
       </div>
-      <span className="font-bold"> CheckList</span>
-      <div className="flex gap-10">
-        <CheckList
-          variant="list"
-          items={[
-            { id: "1", title: "Text" },
-            { id: "2", title: "Text" },
-            { id: "3", title: "Text" },
-          ]}
+      <span className="font-bold">Progress Indicators</span>
+      <div className="mb-12 grid grid-cols-1 gap-5">
+        <RewardsProgress
+          startDate="2025-12-29"
+          dayRewardValues={[5, 10, 15, 20, 25, 30, 35]}
+          onClaim={(day, reward) => {
+            alert(`Claimed ${reward} rewards for Day ${day}`);
+          }}
         />
-        <CheckList
-          variant="checkbox"
-          items={items}
-          onChange={(id, checked) =>
-            setItems((prev) =>
-              prev.map((item) =>
-                item.id === id ? { ...item, checked } : item,
-              ),
-            )
-          }
-        />
-      </div>
-      <span className="font-bold"> DropDown Menu</span>
-      <div className="flex gap-10">
-        <DropDownMenu items={menuItemsDropdown} isGradient={true} />
-        <DropDownMenu items={menuItemsDropdown} isGradient={false} />
-      </div>
-      <span className="font-bold">Header Menu item</span>
-      <div className="flex gap-10">
-        <HeaderMenuItem label={151} iconSrc="/icons/clock-3d.svg" />
-      </div>
-      <span className="font-bold">Header Menu</span>
-      <div className="flex gap-10">
-        <HeaderMenuList items={menuItems} />
+        <div className="w-full">
+          <ClanProgress
+            activePoints={6}
+            totalPoints={10}
+            earningValues={[
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: true,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+            ]}
+          />
+        </div>
+
+        <div className="no-scrollbar w-full">
+          <PersonalProgress
+            progressValues={[
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+            ]}
+          />
+        </div>
+        <span className="font-bold"> CheckList</span>
+        <div className="flex gap-10">
+          <CheckList
+            variant="list"
+            items={[
+              { id: "1", title: "Text" },
+              { id: "2", title: "Text" },
+              { id: "3", title: "Text" },
+            ]}
+          />
+          <CheckList
+            variant="checkbox"
+            items={items}
+            onChange={(id, checked) =>
+              setItems((prev) =>
+                prev.map((item) =>
+                  item.id === id ? { ...item, checked } : item,
+                ),
+              )
+            }
+          />
+        </div>
+        <span className="font-bold"> DropDown Menu</span>
+        <div className="flex gap-10">
+          <DropDownMenu items={menuItemsDropdown} isGradient={true} />
+          <DropDownMenu items={menuItemsDropdown} isGradient={false} />
+        </div>
+        <span className="font-bold">Header Menu item</span>
+        <div className="flex gap-10">
+          <HeaderMenuItem label={151} iconSrc="/icons/clock-3d.svg" />
+        </div>
+        <span className="font-bold">Header Menu</span>
+        <div className="flex gap-10">
+          <HeaderMenuList items={menuItems} />
+        </div>
       </div>
       <span className="font-bold">Drag & Drop</span>
       <div className="flex gap-10">
