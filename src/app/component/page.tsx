@@ -55,9 +55,30 @@ import {
   PersonalProgress,
   RewardsProgress,
 } from "@/components/common/ProgressIndicators";
+import CheckList from "@/components/lists/CheckList";
+import DropDownMenu from "@/components/lists/DropdownMenu";
+import HeaderMenuList from "@/components/lists/HeaderMenuList";
+import HeaderMenuItem from "@/components/common/HeaderMenuItem";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
+  const [items, setItems] = useState([
+    { id: "1", title: "Text", checked: true },
+    { id: "2", title: "Text" },
+    { id: "3", title: "Text" },
+  ]);
+  const menuItemsDropdown: { label: string; icon: React.ReactNode }[] = [
+    { label: "How it works?", icon: <Icons.Info size={20} color="white" /> },
+    { label: "Completed Tasks ", icon: <Icons.Info size={20} color="white" /> },
+  ];
+  const menuItems = [
+    { label: 151, iconSrc: "/icons/clock-3d.svg" },
+    { label: 101, iconSrc: "/icons/clock-3d.svg" },
+    { label: 102, iconSrc: "/icons/clock-3d.svg" },
+    { label: 151, iconSrc: "/icons/clock-3d.svg" },
+    { label: 101, iconSrc: "/icons/clock-3d.svg" },
+    { label: 102, iconSrc: "/icons/clock-3d.svg" },
+  ];
 
   const paymentMethods = [
     {
@@ -1305,6 +1326,41 @@ export default function Page() {
               },
             ]}
           />
+        </div>
+        <span className="font-bold"> CheckList</span>
+        <div className="flex gap-10">
+          <CheckList
+            variant="list"
+            items={[
+              { id: "1", title: "Text" },
+              { id: "2", title: "Text" },
+              { id: "3", title: "Text" },
+            ]}
+          />
+          <CheckList
+            variant="checkbox"
+            items={items}
+            onChange={(id, checked) =>
+              setItems((prev) =>
+                prev.map((item) =>
+                  item.id === id ? { ...item, checked } : item,
+                ),
+              )
+            }
+          />
+        </div>
+        <span className="font-bold"> DropDown Menu</span>
+        <div className="flex gap-10">
+          <DropDownMenu items={menuItemsDropdown} isGradient={true} />
+          <DropDownMenu items={menuItemsDropdown} isGradient={false} />
+        </div>
+        <span className="font-bold">Header Menu item</span>
+        <div className="flex gap-10">
+          <HeaderMenuItem label={151} iconSrc="/icons/clock-3d.svg" />
+        </div>
+        <span className="font-bold">Header Menu</span>
+        <div className="flex gap-10">
+          <HeaderMenuList items={menuItems} />
         </div>
       </div>
     </div>
