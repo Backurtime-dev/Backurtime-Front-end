@@ -50,6 +50,11 @@ import BuyMoreCard from "@/components/cards/BuyMoreCard";
 import MysteryCard from "@/components/cards/MysteryCard";
 import Image from "next/image";
 import FlagCard from "@/components/cards/FlagCard";
+import {
+  ClanProgress,
+  PersonalProgress,
+  RewardsProgress,
+} from "@/components/common/ProgressIndicators";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -1204,6 +1209,103 @@ export default function Page() {
           labelSrc="/components/clan-label-brown.svg"
           variant="brown"
         />
+      </div>
+      <span className="font-bold">Progress Indicators</span>
+      <div className="mb-12 grid grid-cols-1 gap-5">
+        <RewardsProgress
+          startDate="2025-12-29"
+          dayRewardValues={[5, 10, 15, 20, 25, 30, 35]}
+          onClaim={(day, reward) => {
+            alert(`Claimed ${reward} rewards for Day ${day}`);
+          }}
+        />
+        <div className="w-full">
+          <ClanProgress
+            activePoints={6}
+            totalPoints={10}
+            earningValues={[
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: true,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+              {
+                value: "1",
+                earn: false,
+              },
+            ]}
+          />
+        </div>
+
+        <div className="no-scrollbar w-full">
+          <PersonalProgress
+            progressValues={[
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+              {
+                value: "1",
+                active: true,
+              },
+            ]}
+          />
+        </div>
       </div>
     </div>
   );
