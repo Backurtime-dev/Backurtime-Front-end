@@ -1171,11 +1171,13 @@ export default function Page() {
           iconSrc="/icons/apple-icon.svg"
           name="Google gift card"
           variant="gold"
+          price={"€ 20 - 180"}
         />
         <GiftCard
           iconSrc="/icons/apple-icon.svg"
           name="Google gift card"
           variant="green"
+          cardVariant="small"
         />
         <GiftCard
           iconSrc="/icons/apple-icon.svg"
