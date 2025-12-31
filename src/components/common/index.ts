@@ -17,6 +17,9 @@ import StarBadge from "./StarBadge";
 import PriceCounter from "./PriceCounter";
 import ShareSubscriptItem from "./ShareSubscriptItem";
 import DragAndDrop from "./DragAndDrop";
+import Notification from "./Notification";
+import SilverNotification from "./SilverNotification";
+import QuizItem from "./QuizItem";
 
 export {
   Status,
@@ -38,4 +41,7 @@ export {
   PriceCounter,
   ShareSubscriptItem,
   DragAndDrop,
+  Notification,
+  SilverNotification,
+  QuizItem,
 };

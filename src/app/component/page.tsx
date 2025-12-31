@@ -4,8 +4,11 @@ import {
   Button,
   DragAndDrop,
   FilterChips,
+  Notification,
   PriceCounter,
+  QuizItem,
   ShareSubscriptItem,
+  SilverNotification,
   StarBadge,
   Status,
 } from "@/components/common";
@@ -1452,6 +1455,28 @@ export default function Page() {
             selectionType="single"
           />
         </div>
+      </div>
+      <span className="font-bold">Notifcation</span>
+      <div>
+        <Notification amount="€5 000" rank="124" />
+      </div>
+      <span className="font-bold">Silver Notification</span>
+      <div>
+        <SilverNotification
+          title="Remember:"
+          description="To share a YouTube Premium Family account, you must be the administrator. Before offering your subscription for sharing, make sure you have a YouTube Premium FAMILY offer."
+        />
+      </div>
+      <span className="font-bold">Silver Notification</span>
+      <div className="flex flex-col gap-3">
+        <QuizItem
+          description="Analyze every detail to identify the most logical path forward."
+          isActive={true}
+        />
+        <QuizItem
+          description="Analyze every detail to identify the most logical path forward."
+          isActive={false}
+        />
       </div>
     </div>
   );
