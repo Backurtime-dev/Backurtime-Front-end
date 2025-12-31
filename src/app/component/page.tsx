@@ -4,8 +4,11 @@ import {
   Button,
   DragAndDrop,
   FilterChips,
+  Notification,
   PriceCounter,
+  QuizItem,
   ShareSubscriptItem,
+  SilverNotification,
   StarBadge,
   Status,
 } from "@/components/common";
@@ -65,6 +68,10 @@ import Counter from "@/components/timer/Counter";
 import ShopCard from "@/components/cards/ShopCard";
 import StreakFreezeCard from "@/components/cards/StreakFreezeCard";
 import PerkCard from "@/components/cards/PerkCard";
+import { OfferTag } from "@/components/cards/Selectors";
+import { AmountTag } from "@/components/cards/Selectors/AmountTag";
+import { PriceTag } from "@/components/cards/Selectors/PriceTag";
+import { IconTag } from "@/components/cards/Selectors/IconTag";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -87,6 +94,10 @@ export default function Page() {
   ];
   const newYear2026 = new Date("2026-01-01T00:00:00");
   const launchDate = new Date("2026-01-10T00:00:00");
+  const [offers, setOffers] = useState<string[]>([]);
+  const [amounts, setAmounts] = useState<string[]>([]);
+  const [prices, setPrices] = useState<string[]>([]);
+  const [games, setGames] = useState<string[]>([]);
   const paymentMethods = [
     {
       id: "time-balance-1",
@@ -1499,6 +1510,76 @@ export default function Page() {
         />
         <PerkCard variant="silver" isDetail={false} />
         <PerkCard variant="silver" isDetail={false} isButton={false} />
+        <div className="flex flex-col gap-4 space-y-4">
+          <span className="font-bold">Selectors</span>
+
+          {/* Offer Tag (multi-selection) */}
+          <div className="flex flex-col space-y-1">
+            <span>OffersTag (multi-selection)</span>
+            <OfferTag
+              options={["Simple offers", "Daily bonus", "VIP rewards"]}
+              value={offers}
+              onChange={setOffers}
+            />
+          </div>
+
+          {/* Amount Tag (multi-selection) */}
+          <div className="flex flex-col space-y-1">
+            <span>Amount Tag (multi-selection)</span>
+            <AmountTag
+              options={["% 1", "% 5", "% 10"]}
+              value={amounts}
+              onChange={setAmounts}
+            />
+          </div>
+
+          {/* Price Tag (single-selection) */}
+          <div className="flex flex-col space-y-1">
+            <span>Price Tag (multi-selection)</span>
+            <PriceTag
+              options={["€ 10", "€ 25", "€ 50"]}
+              value={prices}
+              onChange={setPrices}
+              selectionType="single"
+            />
+          </div>
+
+          {/* Icon Tag (single-selection) */}
+          <div className="flex flex-col space-y-1">
+            <span>Icon Tag (single-selection)</span>
+            <IconTag
+              options={[
+                { id: "game-1", label: "Game 1" },
+                { id: "game-2", label: "Game 2" },
+              ]}
+              value={games}
+              onChange={setGames}
+              selectionType="single"
+            />
+          </div>
+        </div>
+        <span className="font-bold">Notifcation</span>
+        <div>
+          <Notification amount="€5 000" rank="124" />
+        </div>
+        <span className="font-bold">Silver Notification</span>
+        <div>
+          <SilverNotification
+            title="Remember:"
+            description="To share a YouTube Premium Family account, you must be the administrator. Before offering your subscription for sharing, make sure you have a YouTube Premium FAMILY offer."
+          />
+        </div>
+        <span className="font-bold">Silver Notification</span>
+        <div className="flex flex-col gap-3">
+          <QuizItem
+            description="Analyze every detail to identify the most logical path forward."
+            isActive={true}
+          />
+          <QuizItem
+            description="Analyze every detail to identify the most logical path forward."
+            isActive={false}
+          />
+        </div>
       </div>
     </div>
   );
