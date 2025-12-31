@@ -2,7 +2,7 @@ import { cn } from "@/utils";
 import Image from "next/image";
 
 type StarBadgeProps = {
-  color?: "gold" | "green" | "blue" | "sliver" | "cooper";
+  color?: "gold" | "green" | "blue" | "silver" | "cooper";
   mediaUrl?: string;
   className?: string;
   bgWhite?: boolean;

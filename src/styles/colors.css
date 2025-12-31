@@ -49,6 +49,10 @@
   --drop-shadow-gift-card: 0 4px 4px rgba(0, 0, 0, 0.25);
   --drop-shadow-flag-card-red: 0 4px 20px rgba(255, 60, 60, 0.25);
   --drop-shadow-flag-card-brown: 0 4px 20px rgba(236, 179, 94, 0.25);
+  --drop-shadow-white-lg: 0px 3px 50px #ffffff;
+  --drop-shadow-light-green: 0px 3px 50px rgba(110, 211, 160, 1);
+  --drop-shadow-light-gold: 0px 3px 50px rgba(255, 176, 66, 1);
+  --drop-shadow-light-silver: 0px 3px 50px rgba(255, 255, 255, 1);
   --shadow-key-gold: 0 2.39px 4.781px 0 #d2ab68 inset;
   --shadow-stone:
     0 4px 81.9px 0 rgba(54, 255, 255, 0.2) inset,
@@ -66,4 +70,5 @@
 
   --text-shadow-title-green:
     0 2px 2px rgba(0, 153, 255, 0.3), 1px 6px 10.2px rgba(0, 255, 234, 0.6);
+  --text-shadow-green-sm: 1px 2px 0px rgba(35, 63, 50, 0.5);
 }

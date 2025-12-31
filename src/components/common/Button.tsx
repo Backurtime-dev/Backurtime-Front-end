@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ComponentProps, ReactNode } from "react";
+import React, { ComponentProps, ReactElement, ReactNode } from "react";
 import { cn } from "@/utils";
 import Image from "next/image";
 

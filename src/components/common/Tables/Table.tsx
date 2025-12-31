@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Table,
   TableBody,
@@ -53,7 +53,7 @@ export function DataTable({
           </TableRow>
         )}
         {table.rows.map((row, index) => (
-          <>
+          <Fragment key={row.id}>
             <RowFactory key={row.id} rowData={row} columns={table.columns} />
             {index < table.rows.length - 1 && (
               <TableRow
@@ -66,7 +66,7 @@ export function DataTable({
                 ))}
               </TableRow>
             )}
-          </>
+          </Fragment>
         ))}
       </TableBody>
     </Table>

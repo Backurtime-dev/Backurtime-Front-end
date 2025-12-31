@@ -63,6 +63,8 @@ import HeaderMenuItem from "@/components/common/HeaderMenuItem";
 import WoodenTimer from "@/components/timer/WoodenTimer";
 import Counter from "@/components/timer/Counter";
 import ShopCard from "@/components/cards/ShopCard";
+import StreakFreezeCard from "@/components/cards/StreakFreezeCard";
+import PerkCard from "@/components/cards/PerkCard";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -1195,14 +1197,7 @@ export default function Page() {
           variant="blue"
         />
       </div>
-      <div className="relative h-[300px] w-[20%]">
-        <Image
-          src="/components/freeze-card.png"
-          alt="freeze"
-          fill
-          className="object-fill"
-        />
-      </div>
+
       <span className="font-bold">Award Card</span>
       <div className="mb-12 grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3">
         <AwardCard
@@ -1396,6 +1391,114 @@ export default function Page() {
           price="price"
           iconSrc="/components/shop-card-romantic.svg"
         />
+      </div>
+
+      <span className="font-bold">Streak Freeze Card</span>
+      <div className="grid grid-cols-1">
+        <StreakFreezeCard variant="large" />
+        <StreakFreezeCard variant="medium" isButton={false} />
+      </div>
+
+      <span className="font-bold">Perk Card</span>
+      <div className="flex flex-wrap gap-6">
+        <PerkCard
+          variant="green"
+          subscriptionBenefits={[
+            {
+              id: 1,
+              label:
+                "No commission on shared subscriptions (Spotify, Netflix, etc.)",
+            },
+            { id: 2, label: "No fee when joining a subscription" },
+            {
+              id: 3,
+              label: "Monthly automatic transfers (user picks the date)",
+            },
+            {
+              id: 4,
+              label: "Boosted visibility on the subscription marketplace",
+            },
+            { id: 5, label: "Exclusive avatar frame" },
+            { id: 6, label: "+60 Temps bonus weekly" },
+            { id: 7, label: "1 free draw ticket per month" },
+            {
+              id: 8,
+              label: "Access to a private VIP community channel",
+            },
+            { id: 9, label: "Early access to content" },
+            {
+              id: 10,
+              label:
+                "Exclusive Spuffy collectibles (limited edition or shiny ones)",
+            },
+          ]}
+        />
+        <PerkCard
+          variant="gold"
+          subscriptionBenefits={[
+            {
+              id: 1,
+              label:
+                "No commission on shared subscriptions (Spotify, Netflix, etc.)",
+            },
+            { id: 2, label: "No fee when joining a subscription" },
+            {
+              id: 3,
+              label: "Monthly automatic transfers (user picks the date)",
+            },
+            {
+              id: 4,
+              label: "Boosted visibility on the subscription marketplace",
+            },
+            { id: 5, label: "Exclusive avatar frame" },
+            { id: 6, label: "+60 Temps bonus weekly" },
+            { id: 7, label: "1 free draw ticket per month" },
+            {
+              id: 8,
+              label: "Access to a private VIP community channel",
+            },
+            { id: 9, label: "Early access to content" },
+            {
+              id: 10,
+              label:
+                "Exclusive Spuffy collectibles (limited edition or shiny ones)",
+            },
+          ]}
+        />
+        <PerkCard
+          variant="silver"
+          subscriptionBenefits={[
+            {
+              id: 1,
+              label:
+                "No commission on shared subscriptions (Spotify, Netflix, etc.)",
+            },
+            { id: 2, label: "No fee when joining a subscription" },
+            {
+              id: 3,
+              label: "Monthly automatic transfers (user picks the date)",
+            },
+            {
+              id: 4,
+              label: "Boosted visibility on the subscription marketplace",
+            },
+            { id: 5, label: "Exclusive avatar frame" },
+            { id: 6, label: "+60 Temps bonus weekly" },
+            { id: 7, label: "1 free draw ticket per month" },
+            {
+              id: 8,
+              label: "Access to a private VIP community channel",
+            },
+            { id: 9, label: "Early access to content" },
+            {
+              id: 10,
+              label:
+                "Exclusive Spuffy collectibles (limited edition or shiny ones)",
+            },
+          ]}
+        />
+        <PerkCard variant="silver" isDetail={false} />
+        <PerkCard variant="silver" isDetail={false} isButton={false} />
       </div>
     </div>
   );
