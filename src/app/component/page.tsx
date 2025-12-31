@@ -63,6 +63,10 @@ import HeaderMenuItem from "@/components/common/HeaderMenuItem";
 import WoodenTimer from "@/components/timer/WoodenTimer";
 import Counter from "@/components/timer/Counter";
 import ShopCard from "@/components/cards/ShopCard";
+import { OfferTag } from "@/components/cards/Selectors";
+import { AmountTag } from "@/components/cards/Selectors/AmountTag";
+import { PriceTag } from "@/components/cards/Selectors/PriceTag";
+import { IconTag } from "@/components/cards/Selectors/IconTag";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -85,6 +89,10 @@ export default function Page() {
   ];
   const newYear2026 = new Date("2026-01-01T00:00:00");
   const launchDate = new Date("2026-01-10T00:00:00");
+  const [offers, setOffers] = useState<string[]>([]);
+  const [amounts, setAmounts] = useState<string[]>([]);
+  const [prices, setPrices] = useState<string[]>([]);
+  const [games, setGames] = useState<string[]>([]);
   const paymentMethods = [
     {
       id: "time-balance-1",
@@ -1396,6 +1404,54 @@ export default function Page() {
           price="price"
           iconSrc="/components/shop-card-romantic.svg"
         />
+      </div>
+      <div className="flex flex-col gap-4 space-y-4">
+        <span className="font-bold">Selectors</span>
+
+        {/* Offer Tag (multi-selection) */}
+        <div className="flex flex-col space-y-1">
+          <span>OffersTag (multi-selection)</span>
+          <OfferTag
+            options={["Simple offers", "Daily bonus", "VIP rewards"]}
+            value={offers}
+            onChange={setOffers}
+          />
+        </div>
+
+        {/* Amount Tag (multi-selection) */}
+        <div className="flex flex-col space-y-1">
+          <span>Amount Tag (multi-selection)</span>
+          <AmountTag
+            options={["% 1", "% 5", "% 10"]}
+            value={amounts}
+            onChange={setAmounts}
+          />
+        </div>
+
+        {/* Price Tag (single-selection) */}
+        <div className="flex flex-col space-y-1">
+          <span>Price Tag (multi-selection)</span>
+          <PriceTag
+            options={["€ 10", "€ 25", "€ 50"]}
+            value={prices}
+            onChange={setPrices}
+            selectionType="single"
+          />
+        </div>
+
+        {/* Icon Tag (single-selection) */}
+        <div className="flex flex-col space-y-1">
+          <span>Icon Tag (single-selection)</span>
+          <IconTag
+            options={[
+              { id: "game-1", label: "Game 1" },
+              { id: "game-2", label: "Game 2" },
+            ]}
+            value={games}
+            onChange={setGames}
+            selectionType="single"
+          />
+        </div>
       </div>
     </div>
   );
