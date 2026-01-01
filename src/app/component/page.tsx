@@ -57,6 +57,7 @@ import FlagCard from "@/components/cards/FlagCard";
 import {
   ClanProgress,
   PersonalProgress,
+  ProgressBars,
   RewardsProgress,
 } from "@/components/common/ProgressIndicators";
 import CheckList from "@/components/lists/CheckList";
@@ -1395,11 +1396,18 @@ export default function Page() {
         <Counter targetDate={launchDate} variant="flat" />
       </div>
       <span className="font-bold">Shop Card</span>
-      <div className="grid grid-cols-1 sm:grid-cols-3">
+      <div className="gap grid grid-cols-1 gap-8 sm:grid-cols-3">
         <ShopCard
           imageUrl="/components/shop-card-image.png"
           title="Psychodelic"
           price="price"
+          iconSrc="/components/shop-card-romantic.svg"
+        />
+        <ShopCard
+          imageUrl="/components/shop-card-image.png"
+          title="Psychodelic"
+          price="price"
+          isBorder
           iconSrc="/components/shop-card-romantic.svg"
         />
       </div>
@@ -1579,6 +1587,55 @@ export default function Page() {
             description="Analyze every detail to identify the most logical path forward."
             isActive={false}
           />
+        </div>
+      </div>
+      <div className="">
+        <span className="font-bold">Progress</span>
+        <div className="flex flex-col gap-6 pt-6">
+          <div className="flex flex-col gap-3">
+            <span className="mb-2 font-normal">Wooden Silver Progress</span>
+            <ProgressBars variant="wooden-silver" value={10} />
+          </div>
+          <div className="flex flex-col gap-3">
+            <span className="mb-2 font-normal">Wooden gold Progress</span>
+            <ProgressBars variant="wooden-gold" value={10} />
+          </div>
+          <div className="flex flex-col gap-3">
+            <span className="mb-2 font-normal">stone Progress</span>
+            <ProgressBars variant="stone" value={10} />
+          </div>
+          <div className="flex flex-col gap-3">
+            <span className="font-normal">Default</span>
+            <ProgressBars value={10} label={`+1610`} />
+          </div>
+          <div className="flex flex-col gap-3">
+            <span className="mb-2 font-normal">win Progress</span>
+            <ProgressBars variant="winProgress" value={10} />
+          </div>
+          <div className="flex flex-col gap-3">
+            <span className="mb-2 font-normal">step Progress</span>
+            <ProgressBars
+              counter={1}
+              stage={10}
+              variant="stepProgress"
+              label="Download the app"
+              value={100}
+            />
+            <ProgressBars
+              counter={1}
+              stage={10}
+              variant="stepProgress"
+              label="Download the app"
+              value={50}
+            />
+            <ProgressBars
+              counter={1}
+              stage={10}
+              variant="stepProgress"
+              label="Download the app"
+              value={0}
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -8,6 +8,7 @@ type BadgeProps = {
   className?: string;
   level?: number | string;
   crown?: boolean;
+  imageClassName?: string;
 };
 
 export default function Badge({
@@ -17,12 +18,13 @@ export default function Badge({
   className,
   level,
   crown = false,
+  imageClassName,
 }: BadgeProps) {
   return (
     <div
       className={`${className} relative flex aspect-square h-[58px] w-[58px] items-center justify-center rounded-full`}
     >
-      <div className="shadow-light absolute h-[85%] w-[85%] rounded-full" />
+      {/* <div className="shadow-light absolute h-[85%] w-[85%] rounded-full" /> */}
       <Image
         src={
           type === "user"
@@ -46,6 +48,7 @@ export default function Badge({
         className={cn(
           "flex size-[68%] items-center justify-center rounded-full p-px",
           "absolute top-1/2 left-1/2 -translate-1/2",
+          imageClassName,
           crown &&
             "bg-[linear-gradient(180deg,#EEAF3E_0%,#BA6909_50%,#FFEAC8_75%,#FCC864_100%)] bg-cover bg-center bg-no-repeat",
         )}

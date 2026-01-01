@@ -10,7 +10,12 @@ interface TypesProps {
 }
 
 const StreakFreezeCard = ({ variant, isButton = true }: TypesProps) => {
-  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+  let initalWindow = 0;
+
+  if (typeof window !== "undefined") {
+    initalWindow = window.innerWidth;
+  }
+  const [screenWidth, setScreenWidth] = useState<number>(initalWindow);
 
   useEffect(() => {
     const handleResize = () => {
