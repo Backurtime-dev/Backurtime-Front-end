@@ -40,6 +40,7 @@
   --shadow-white: 0px 4px 20px 0px rgba(235, 255, 253, 1);
   --drop-shadow-icon-sm: 0 4px 10px rgba(235, 255, 255, 0.8);
   --drop-shadow-offer-banner-img: 10px -13px 20px rgba(0, 255, 195, 0.1);
+  --drop-shadow-icon-xs: 0 10px 22px #ebfffd;
   --drop-shadow-icon-md: 0 4px 12px rgba(235, 255, 253, 1);
   --drop-shadow-icon-md2: 0 4px 20px #ebfffd;
   --drop-shadow-icon-gold: 0 8px 10px rgba(241, 158, 19, 0.5);
