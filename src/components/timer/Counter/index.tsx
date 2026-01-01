@@ -8,6 +8,7 @@ type TimerVariant = "box" | "flat";
 interface CountdownTimerProps {
   targetDate: Date;
   variant?: TimerVariant;
+  isMobile?: boolean;
   className?: string;
 }
 
@@ -21,6 +22,7 @@ type TimeLeft = {
 export default function CountdownTimer({
   targetDate,
   variant = "box",
+  isMobile = false,
   className,
 }: CountdownTimerProps) {
   const calculateTimeLeft = (): TimeLeft => {
@@ -53,33 +55,61 @@ export default function CountdownTimer({
   const containerClass = useMemo(
     () =>
       cn(
-        "gap-6 sm:rounded-2xl sm:px-6 px-3 py-2 w-max rounded-[12px] max-sm:opacity-[0.8",
-        variant === "box" ? "bg-primitives-white_10 ]" : "bg-transparent",
+        "gap-6 rounded-[12px] px-3 py-2 w-max",
+        !isMobile && "sm:rounded-2xl sm:px-6",
+        !isMobile && "max-sm:opacity-[0.8]",
+        variant === "box" ? "bg-primitives-white_5" : "bg-transparent",
         className,
       ),
-    [variant, className],
+    [variant, className, isMobile],
   );
 
   const renderBlock = (value: number, label: string) => (
-    <div className="max-sm:flex max-sm:items-center max-sm:gap-1 sm:text-center">
-      <div className="font-inter text-base leading-[140%] font-semibold text-white sm:text-2xl">
+    <div
+      className={cn(
+        "flex items-center gap-1",
+        !isMobile && "sm:block sm:text-center",
+      )}
+    >
+      <div
+        className={cn(
+          "font-inter font-semibold text-white",
+          isMobile
+            ? "text-base leading-[140%]"
+            : "text-base leading-[140%] sm:text-2xl",
+        )}
+      >
         {format(value)}
       </div>
 
-      {/* Mobile: first letter */}
-      <div className="font-inter text-base leading-[140%] text-white sm:hidden">
+      {/* Mobile label (first letter) */}
+      <div
+        className={cn(
+          "font-inter text-base leading-[140%] text-white",
+          !isMobile && "sm:hidden",
+        )}
+      >
         {label.charAt(0)}
       </div>
 
-      {/* Desktop: full label */}
-      <div className="font-inter mt-1 hidden text-base leading-[140%] tracking-[0.16px] text-white sm:block">
-        {label}
-      </div>
+      {/* Desktop label */}
+      {!isMobile && (
+        <div className="font-inter mt-1 hidden text-base leading-[140%] tracking-[0.16px] text-white sm:block">
+          {label}
+        </div>
+      )}
     </div>
   );
 
   const colon = (
-    <span className="font-inter text-base leading-[135%] font-normal text-white sm:text-2xl sm:font-semibold">
+    <span
+      className={cn(
+        "font-inter text-white",
+        isMobile
+          ? "text-base leading-[135%]"
+          : "text-base leading-[135%] sm:text-2xl sm:font-semibold",
+      )}
+    >
       :
     </span>
   );

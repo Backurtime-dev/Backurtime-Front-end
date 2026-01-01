@@ -73,6 +73,8 @@ import { OfferTag } from "@/components/cards/Selectors";
 import { AmountTag } from "@/components/cards/Selectors/AmountTag";
 import { PriceTag } from "@/components/cards/Selectors/PriceTag";
 import { IconTag } from "@/components/cards/Selectors/IconTag";
+import CardDraw from "@/components/cards/CardDraw";
+import CountdownTimer from "@/components/timer/Counter";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -1392,8 +1394,8 @@ export default function Page() {
       </div>
       <span className="font-bold">Counter</span>
       <div className="flex flex-col gap-10 sm:flex-row">
-        <Counter targetDate={launchDate} variant="box" />
-        <Counter targetDate={launchDate} variant="flat" />
+        <CountdownTimer targetDate={launchDate} variant="box" />
+        <CountdownTimer targetDate={launchDate} variant="flat" />
       </div>
       <span className="font-bold">Shop Card</span>
       <div className="gap grid grid-cols-1 gap-8 sm:grid-cols-3">
@@ -1566,19 +1568,18 @@ export default function Page() {
             />
           </div>
         </div>
-        <span className="font-bold">Notifcation</span>
-        <div>
-          <Notification amount="€5 000" rank="124" />
-        </div>
+
+        <span className="w-full font-bold">Notifcation</span>
+        <Notification amount="€5 000" rank="124" />
+
         <span className="font-bold">Silver Notification</span>
-        <div>
-          <SilverNotification
-            title="Remember:"
-            description="To share a YouTube Premium Family account, you must be the administrator. Before offering your subscription for sharing, make sure you have a YouTube Premium FAMILY offer."
-          />
-        </div>
-        <span className="font-bold">Silver Notification</span>
-        <div className="flex flex-col gap-3">
+        <SilverNotification
+          title="Remember:"
+          description="To share a YouTube Premium Family account, you must be the administrator. Before offering your subscription for sharing, make sure you have a YouTube Premium FAMILY offer."
+        />
+
+        <span className="font-bold">Quiz item</span>
+        <div className="flex w-full flex-col gap-3">
           <QuizItem
             description="Analyze every detail to identify the most logical path forward."
             isActive={true}
@@ -1586,6 +1587,29 @@ export default function Page() {
           <QuizItem
             description="Analyze every detail to identify the most logical path forward."
             isActive={false}
+          />
+        </div>
+        <span className="font-bold">Card Draw</span>
+        <div className="grid w-full grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <CardDraw
+            title="Cyber Monday"
+            imageUrl="/components/card-draw-green-image.png"
+            cardColor="green"
+            pastDraws={false}
+          />
+          <CardDraw
+            title="Cyber Monday"
+            imageUrl="/components/card-draw-green-image.png"
+            cardColor="green"
+            pastDraws={false}
+            entryCount={3}
+          />
+          <CardDraw
+            title="Cyber Monday"
+            imageUrl="/components/card-draw-gold-image.png"
+            cardColor="gold"
+            pastDraws={true}
+            entryCount={1}
           />
         </div>
       </div>
