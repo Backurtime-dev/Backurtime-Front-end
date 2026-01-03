@@ -9,6 +9,7 @@ import {
   QuizItem,
   ShareSubscriptItem,
   SilverNotification,
+  SliderItem,
   StarBadge,
   Status,
 } from "@/components/common";
@@ -52,7 +53,6 @@ import AwardCard from "@/components/cards/AwardCard";
 import ServeyCard from "@/components/cards/ServeyCard";
 import BuyMoreCard from "@/components/cards/BuyMoreCard";
 import MysteryCard from "@/components/cards/MysteryCard";
-import Image from "next/image";
 import FlagCard from "@/components/cards/FlagCard";
 import {
   ClanProgress,
@@ -65,7 +65,6 @@ import DropDownMenu from "@/components/lists/DropdownMenu";
 import HeaderMenuList from "@/components/lists/HeaderMenuList";
 import HeaderMenuItem from "@/components/common/HeaderMenuItem";
 import WoodenTimer from "@/components/timer/WoodenTimer";
-import Counter from "@/components/timer/Counter";
 import ShopCard from "@/components/cards/ShopCard";
 import StreakFreezeCard from "@/components/cards/StreakFreezeCard";
 import PerkCard from "@/components/cards/PerkCard";
@@ -75,6 +74,7 @@ import { PriceTag } from "@/components/cards/Selectors/PriceTag";
 import { IconTag } from "@/components/cards/Selectors/IconTag";
 import CardDraw from "@/components/cards/CardDraw";
 import CountdownTimer from "@/components/timer/Counter";
+import { PaginationControl } from "@/components/common";
 
 export default function Page() {
   const [selectedId, setSelectedId] = useState<string | null>("visa-hdfc");
@@ -101,6 +101,7 @@ export default function Page() {
   const [amounts, setAmounts] = useState<string[]>([]);
   const [prices, setPrices] = useState<string[]>([]);
   const [games, setGames] = useState<string[]>([]);
+  const [page, setPage] = useState(1);
   const paymentMethods = [
     {
       id: "time-balance-1",
@@ -1661,6 +1662,23 @@ export default function Page() {
             />
           </div>
         </div>
+      </div>
+      <span className="font-bold">Pagination</span>
+      <div className="w-full">
+        <PaginationControl
+          currentPage={page}
+          totalPages={8}
+          onPageChange={setPage}
+        />
+      </div>
+      <span className="font-bold">Slider Item</span>
+      <div className="w-full">
+        <SliderItem
+          title="Complete more offers"
+          description="Dive into our Missions and Offers to earn Keys and Fragments for every task you complete. This is the core way to boost your collection. This is the core way to boost your collection."
+          badge={<StarBadge color="silver" />}
+          onClick={() => console.log("Clicked")}
+        />
       </div>
     </div>
   );

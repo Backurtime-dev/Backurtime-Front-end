@@ -2,9 +2,14 @@ import type { SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement> & {
   size?: number;
+  color?: string;
 };
 
-const SvgArrowLeft = ({ size = 24, ...props }: IconProps) => (
+const SvgArrowLeft = ({
+  size = 24,
+  color = "#DCDCDC",
+  ...props
+}: IconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={size}
@@ -15,7 +20,7 @@ const SvgArrowLeft = ({ size = 24, ...props }: IconProps) => (
   >
     <path
       d="M9.57 5.92999L3.5 12L9.57 18.07"
-      stroke="#DCDCDC"
+      stroke={color}
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -23,7 +28,7 @@ const SvgArrowLeft = ({ size = 24, ...props }: IconProps) => (
     />
     <path
       d="M20.4999 12H3.66992"
-      stroke="#DCDCDC"
+      stroke={color}
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"

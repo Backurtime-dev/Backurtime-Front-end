@@ -20,6 +20,8 @@ import DragAndDrop from "./DragAndDrop";
 import Notification from "./Notification";
 import SilverNotification from "./SilverNotification";
 import QuizItem from "./QuizItem";
+import PaginationControl from "./Pagination";
+import SliderItem from "./SliderItem";
 
 export {
   Status,
@@ -44,4 +46,6 @@ export {
   Notification,
   SilverNotification,
   QuizItem,
+  PaginationControl,
+  SliderItem,
 };
